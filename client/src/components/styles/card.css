@@ -1,0 +1,50 @@
+.card {
+    position: relative;
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+}
+
+.card:hover .pic img {
+    scale: 1.05;
+    transition: all 0.3s;
+}
+
+.pic img {
+    aspect-ratio: 1;
+    transition: 0.5s all ease-in-out;
+    border: 1px solid #424070;
+}
+
+
+.titleContainer{
+    margin-top: 1rem;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleCat {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    font-family: Futura;
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    @media screen and (min-width:641px) {
+        font-size: 1.5rem;
+        letter-spacing: 0.4rem;
+    }
+    font-weight: 500;
+}
+
+.titleBar {
+    width: 20rem;
+}

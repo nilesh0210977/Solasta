@@ -1,0 +1,79 @@
+.navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  height: 100vh;
+  width: 80px;
+  padding: 0.5rem;
+  color: white;
+  transition: 0.5s all ease-in-out;
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.4);
+}
+
+.desktopNav{
+  display: none;
+
+}
+
+@media screen and (min-width : 800px) {
+  .desktopNav{
+    display: block;
+  }
+}
+
+.logo-img, .udgosh-img{
+  width: 80px;
+  height: auto;
+}
+
+
+.middle-box{
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.2rem;
+  font-family: Futura;
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+}
+
+.navbar:hover {
+  width: 15%;
+  backdrop-filter: blur(16px);
+}
+
+.nav-link-text{
+  display: none;
+}
+
+
+.navbar:hover .nav-link-text{
+  display: block;
+}
+
+.navbar:hover  .nav-link-icon{
+  transform: scale(1.2);
+}
+
+
+.nav-link:hover .nav-link-icon,
+.nav-link:hover .nav-link-text {
+  color: #f05;
+}
+
+.active{
+  color: #f05;
+}

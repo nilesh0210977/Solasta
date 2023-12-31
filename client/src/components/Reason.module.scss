@@ -1,0 +1,90 @@
+.service-section {
+  padding: 2.2rem 1rem;
+  @media screen and (min-width: 641px) {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @media screen and (min-width: 1025px) {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  @media screen and (min-width: 1225px) {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+  @media screen and (min-width: 1600px) {
+    padding-left: 14rem;
+    padding-right: 14rem;
+  }
+}
+
+.service-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 2rem 0rem;
+  margin-top: 2rem;
+  border: 2px solid var(--brand-color);
+  border-radius: 10px;
+
+  @media screen and (min-width: 481px) {
+    gap: 16px;
+  }
+}
+
+.services-bottom {
+  padding-top: 9rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+
+  h2 {
+    font-size: var(--fs-normal);
+  }
+}
+
+.fig-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+  background-color: #232323;
+  color: white;
+  border-radius: 5px;
+  min-width: 150px;
+
+  @media screen and (min-width: 1025px) {
+    min-width: 280px;
+  }
+  @media screen and (min-width: 1600px) {
+    min-width: 420px;
+  }
+
+  img {
+    height: auto;
+    width: 150px;
+
+    @media screen and (min-width: 1025px) {
+      width: 280px;
+    }
+    @media screen and (min-width: 1600px) {
+      width: 420px;
+    }
+  }
+
+  figCaption {
+    text-align: center;
+    font-size: 12px;
+
+    @media screen and (min-width: 641px) {
+      font-size: var(--fs-text);
+    }
+  }
+}

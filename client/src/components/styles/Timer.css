@@ -1,0 +1,103 @@
+#timer-section{
+    /* border: 3px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+    gap: 5rem;
+}
+
+#timer-section #timer-head {
+    font-family: Lato;
+    font-size: 3rem;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+    color: white;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#timer-head span {
+    color: #F05;
+    text-shadow: 0 0 10px #F05;
+}
+
+#timer {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    /* border: 3px solid red; */
+}
+
+
+
+.timer-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 9rem;
+    height: 6rem;
+    color: #FFF;
+    font-size: 4rem;
+    font-family: Futura;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.6rem;
+    border-radius: 1rem;
+    border: 1px solid #FFF;
+    background: #F05;
+    box-shadow: 0 0 20px #F05;
+    text-align: center;
+
+    @media screen and (max-width:720px) {
+        height:4rem;
+        width:4rem;
+        font-size:1.7rem;
+    } 
+}
+
+
+.timer-box-sub {
+    padding: 0;
+    color: #FFF;
+    font-family: Lato;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 5;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    margin-top: 1rem;
+    @media screen and (max-width:720px) {
+        font-size:0.7rem;
+    } 
+}
+
+.register-btn {
+    display: none;
+}
+
+.register-btn img {
+    max-width: 25%;
+    height: auto;
+}
+
+
+.timerEvents{
+    padding: 3rem;
+    border-radius: 1rem;
+    background-color: rgba(255,255,255, 0.08);
+    backdrop-filter: blur(15px);
+ }
+ 
+
+@media screen and (min-width:720px) and (max-width:961px) {
+    .timerEvents  li {
+    /*  */
+    }
+} 
+ .timerEvents li p{
+     font-size: 10px !important;
+ }

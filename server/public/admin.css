@@ -1,0 +1,130 @@
+:root {
+    --main: 'Manrope';
+    --accent: #06577A;
+}
+
+body,
+* {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form {
+    font-family: 'Manrope', sans-serif;
+    padding: 0 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* border: 1px solid red; */
+    align-items: center;
+}
+
+label {
+    color: rgba(0, 0, 0, 0.52);
+    /* border: 1px solid red; */
+    width: 20rem;
+    margin-top: 1rem;
+}
+
+.hide {
+    display: none;
+}
+
+input,
+textarea,
+select {
+    font-family: 'Manrope';
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 1rem;
+    padding: 0 5px;
+    width: 20rem;
+    height: 2.5rem;
+    background: rgba(247, 247, 247, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+textarea {
+    height: 10rem;
+}
+
+#rules,
+#description {
+    height: 10rem;
+    resize: vertical;
+    overflow-y: scroll;
+}
+
+button {
+    font-family: 'Manrope';
+    font-size: 1.5rem;
+    color: white;
+    border: none;
+    width: 10rem;
+    height: 2.5rem;
+    margin: 3rem 0;
+    border-radius: 8px;
+    background-color: var(--accent);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+}
+
+#eventhead {
+    margin: 2rem 0;
+    text-align: center;
+    font-family: 'Manrope';
+    font-size: 1rem;
+    color: var(--accent);
+}
+
+.events {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+}
+
+.event-card {
+    border-radius: 6px;
+    width: 20rem;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+    box-shadow: 1px 1px 6px 5px rgba(0, 0, 0, 0.07);
+
+}
+
+.event-card-header {
+    word-wrap: break-word;
+    font-family: 'Manrope';
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.836);
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.edit-btn,
+.delete-btn {
+    height: 2rem;
+    margin: 0.5rem auto;
+}
+
+.edit-btn a {
+    padding: 0 2rem;
+    text-decoration: none;
+    color: white;
+}
+
+.delete-btn {
+    background-color: rgb(131, 0, 0);
+}
+
+.delete-btn img {
+    width: 1rem;
+
+}
