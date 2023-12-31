@@ -31,7 +31,7 @@ app.get("/",async(req,res) => {
 app.get("/admin",async (req, res) => {
   try{
     const events = await Event.find();
-    res.render("EventPanel.ejs", { events: events });
+    res.render("eventPanel.ejs", { events: events });
   }
   catch(error){
     console.log(error);

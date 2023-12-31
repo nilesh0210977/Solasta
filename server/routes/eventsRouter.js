@@ -58,10 +58,9 @@ router.post("/save-event/:id", async (req, res) => {
     const { id } = req.params;
     let event = await Event.findOne({_id : id });
     if (event) {
-        console.log(event._id);
+       
         const updateEvent = await Event.updateOne({_id:id }, { ...req.body, ruleBook: req.body.ruleBook.split(".") }, { new: true });
-        console.log(updateEvent._id);
-        return res.status(202).json(updateEvent);
+       res.redirect("/admin");
     } else {
         res.send("Sorry, Event Not Found! Please check 'eid' in URL.");
     }
