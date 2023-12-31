@@ -16,7 +16,7 @@ const EventDetails = () => {
   }
 
   useEffect(() => {
-      fetchData(`https://solasta.vercel.app/admin/get-event-info/${id}`)
+      fetchData(`http://65.2.6.123/admin/get-event-info/${id}`)
   },[id]);
 
   return (
@@ -56,7 +56,7 @@ const EventDetails = () => {
       <div className="Data">
         <div className="grid-section-1">
           <div className="subgrids-1">Registration Fees: {data.registrationFee}</div>
-          
+          <div className="subgrids-1">Type: {data.type}</div>
           <div className="subgrids-1 flex gap-2"><Icon icon='bi:trophy' />Prize Pool:{data.prizePool}</div>
         </div>
         <div className="grid-section-2">
@@ -79,20 +79,34 @@ const EventDetails = () => {
             <span>{data.venue}</span>
           </div>
         </div>
+        {/* <div className="mainContainer"> */}
         <div className="grid-section-3">
           <p className="rules-head">
-            {/* <span class="material-symbols-outlined icon">
+            <span class="material-symbols-outlined icon">
               collections_bookmark
-            </span> */}
+            </span>
             <Icon icon="flat-color-icons:rules" className="icons" />
             Rule Book
           </p>
           <div className="flex flex-col gap-3 items-start  w-full">
-          {data.ruleBook.map((rule) => <p className="rules">{rule}</p>)}
+          {data?.ruleBook.map((rule) => <p className="rules">{rule}</p>)}
 
           </div>
           
         </div>
+        <div className="grid-section-3">
+          <p className="rules-head">
+            <Icon icon="flat-color-icons:rules" className="icons" />
+            Description
+          </p>
+          <div className="flex flex-col gap-3 items-start  w-full">
+          {data?.description.map((rule) => <p className="rules">{rule}</p>)}
+
+          </div>
+          
+        </div>
+        {/* </div> */}
+
       </div>
     </div>
     

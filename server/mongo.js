@@ -2,8 +2,8 @@ import mongoose from "mongoose";
 mongoose.set("strictQuery", true);
 
 const eventSchema = new mongoose.Schema({
-  category: String,
   title: String,
+  category: String,
   img: String,
   venue: String,
   date: String,
@@ -12,6 +12,9 @@ const eventSchema = new mongoose.Schema({
   registrationFee: String,
   ruleBook:{
     type:Array,
+  },
+  description:{
+    type : Array
   },
   type: String,
   noOfSlots: Number,

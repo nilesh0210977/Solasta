@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import "../components/styles/Events.css";
+import { useLocation } from "react-router-dom";
 import "../App.css";
 import { Link } from "react-router-dom";
 import Timer from "../components/Timer";
@@ -12,7 +12,7 @@ import {fadeIn} from "../utils/motion";
 const EventCard = ({ _id, title, date, time, venue, img,}) => {
   return (
     <motion.div variants={fadeIn("up", "spring", _id * 0.5, 0.75)}   className="mainCard cursor-pointer flex flex-col relative overflow-hidden text-white">
-        <img src={img} alt="" />
+        <img src={`../assets/server/${img}`} alt="" />
         <div className="hoverCard">
           <div className="flex flex-col gap-3">
             <p className="events-para"><Icon icon="uiw:date" /> - {date} </p>
@@ -31,27 +31,37 @@ const EventCard = ({ _id, title, date, time, venue, img,}) => {
 
 const Events = () => {
 
+
+  const location = useLocation();
+  const category = location.state || 'All';
+  console.log(location.state);
+
   const categories = ["All", "Dance", "Arts", "Music", "Technical", "Literature"];
-  const [currentCategory, setCurrentCategory] = useState("All");
+
+
+  const [currentCategory, setCurrentCategory] = useState(category);
   const [list, setList] = useState([]);
   
 
   const changeCategory = (category) => {
     setCurrentCategory(category);
-    if(category === "All") fetchData("https://solasta.vercel.app/admin/get-events");
-    else fetchData(`https://solasta.vercel.app/admin/get-events/${category}`);
+    // http://localhost:5000/admin
+    if(category === "All") fetchData("http://65.2.6.123/admin/get-events");
+    else fetchData(`http://65.2.6.123/admin/get-events/${category}`);
   }
 
 
   const fetchData = async(url) => {
+    if(category && category !== "All") url = `${url}/${category}`
     const res = await fetch(url);
     const data = await res.json();
+    console.log(data);
     setList(data); 
   }
 
   useEffect(() => {
     window.scrollTo(0,0);
-    fetchData("https://solasta.vercel.app/admin/get-events");
+    fetchData("http://65.2.6.123/admin/get-events");
   },[]);
 
 

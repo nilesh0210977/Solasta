@@ -17,22 +17,19 @@
         <p id="eventhead">Enter details to modify event:</p>
         <form action="/admin/save-event/<%= event._id %>" method="post">
             <select name="category" id="category">
-                <option value="<%=event.category %>" selected>
-                    Category
-                </option>
-                <option value="sports">Sports</option>
-                <option value="literary">Literary</option>
-                <option value="arts">Fine Arts</option>
-                <option value="cultural">Cultural</option>
-                <option value="gaming">Gaming</option>
-                <option value="informals">Informals</option>
-                <option value="fashion">Fashion Show</option>
-                <option value="marathon">Marathon</option>
-                <option value="online">Online Events</option>
-            </select>
+                <option value="<%=event.category %>" selected><%= event.category %></option>
+                    <option value="Creative Arts">Creative Arts</option>
+                    <option value="Technical Events">Technical Events</option>
+                    <option value="Literary">Literary</option>
+                    <option value="Esports">Esports</option>
+                    <option value="Fun Games">Fun Games</option>
+                    <option value="Digital Arts">Digital Arts</option>
+                    <option value="Pronites">Pronites</option>
+                    <option value="Performing Arts">Performing Arts</option>
+                </select>
             <br>
             <select name="type" id="type">
-                <option value="<%= event.type %>" selected disabled>Type</option>
+                <option value="<%= event.type %>" selected disabled><%= event.type %></option>
                 <option value="solo">Solo</option>
                 <option value="duet">Duet</option>
                 <option value="group">Group</option>
@@ -41,11 +38,6 @@
 
             <label for="name">Event Name: </label>
             <input value="<%= event.title %>" type="text" id="name" name="title" />
-
-            <!-- 
-            <label for="detail">Event Description: </label>
-            <input value="<%= event.detail %>" 
-            type="text" id="detail" name="detail" /> -->
 
 
             <label for="photo">Photo Name with Extension: </label>
@@ -79,10 +71,9 @@
 
             <label for="link">Form Link: </label>
             <input type="text" value="<%= event.link %>" name="link" id="link" />
-            <!-- 
-            <label for="description">Contact: </label>
-            <textarea rows="{2}" id="description" name="description"><%= event.description %></textarea> -->
-
+        
+            <label for="description">Description: </label>
+            <textarea rows="{6}" id="description" name="description"><%= event.description.join('.') %></textarea>
 
             <label for="rules">Rule book: </label>
             <textarea rows="{6}" id="rules" name="ruleBook"><%= event.ruleBook.join('.') %></textarea>

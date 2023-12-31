@@ -23,8 +23,11 @@ router.get("/get-events/:category", async(req,res) => {
 
 router.post("/add-event", async (req, res) => {
 
+    console.log(req.body);
+
     try {
-        const event = await Event.create({ ...req.body, ruleBook: req.body.ruleBook.split(".") });
+        const event = await Event.create({ ...req.body, ruleBook: req.body.ruleBook.split("."), description : req.body.description.split(".") });
+        console.log(event)
         res.redirect("/admin");
         return "Success";
     }
@@ -38,7 +41,7 @@ router.get("/edit-event/:id", async (req, res) => {
     try {
         const event = await Event.findOne({_id : id });
         if (event) {
-            return res.render("EditEvent.ejs", { event: event });
+            return res.render("editEvent.ejs", { event: event });
         } else {
             return res.send("Sorry Event Not Found! Please Check 'eid' in URL.");
         }
@@ -58,13 +61,13 @@ router.post("/save-event/:id", async (req, res) => {
     const { id } = req.params;
     let event = await Event.findOne({_id : id });
     if (event) {
-       
-        const updateEvent = await Event.updateOne({_id:id }, { ...req.body, ruleBook: req.body.ruleBook.split(".") }, { new: true });
-       res.redirect("/admin");
+        const updateEvent = await Event.updateOne({_id:id }, { ...req.body, ruleBook: req.body.ruleBook.split("."), description : req.body.description.split(".") }, { new: true });
+        console.log(updateEvent); 
+        res.redirect("/admin");
+        //  res.json("Updated Success");
     } else {
         res.send("Sorry, Event Not Found! Please check 'eid' in URL.");
     }
-    res.redirect("/");
 });
 
 

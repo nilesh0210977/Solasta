@@ -55,6 +55,15 @@
   backdrop-filter: blur(16px);
 }
 
+@media screen and (max-width:961px) {
+  .navbar:hover{
+    width: 25%;
+  }
+
+}
+
+
+
 .nav-link-text{
   display: none;
 }

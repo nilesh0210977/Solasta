@@ -1,0 +1,6 @@
+const data = [
+    {
+        question : " ",
+        answer : "",
+    }
+]
