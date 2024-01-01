@@ -54,7 +54,7 @@ const Navbar = () => {
 									className="nav-link"
 								>
 									<Icon icon="mdi:register" className="nav-link-icon"/>
-									<span className="nav-link-text">Register Now</span>
+									<span className="nav-link-text">Register</span>
 
 								</a>
 					</div>
@@ -123,7 +123,7 @@ const Navbar = () => {
 									href="https://docs.google.com/forms/d/e/1FAIpQLSda--XmXb30n94VlHDZtgPvoEo5DCvFi6k7qUgs9SJTQ5p-8w/formrestricted"
 									className="quick-link"
 								>
-									Basic Registration Form
+									Register
 								</a>
 								<img src={udghosh} className="udgosh-img" />
 							</div>

@@ -27,7 +27,7 @@ export default function Hero() {
         href="https://docs.google.com/forms/d/e/1FAIpQLSda--XmXb30n94VlHDZtgPvoEo5DCvFi6k7qUgs9SJTQ5p-8w/formrestricted"
         className="quick-link"
       >
-        Basic Registration Form
+        Register Now
       </a></button>
     </div>
   );

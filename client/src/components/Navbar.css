@@ -7,10 +7,10 @@
   top: 0;
   z-index: 999;
   height: 100vh;
-  width: 80px;
   padding: 0.5rem;
   color: white;
   transition: 0.5s all ease-in-out;
+  width: 80px;
   background: rgba(255,255,255,0.1);
   backdrop-filter: blur(8px);
   box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.4);
@@ -31,55 +31,58 @@
   width: 80px;
   height: 80px;
   object-fit: contain;
+  /* margin: 0 auto; */
 }
+
 
 .udgosh-img{
   width: 80px;
   height: 40px;
   object-fit: contain;
+   /* margin: 0 auto; */
 }
 
 
 .middle-box{
   display: flex;
   flex-direction: column;
+  margin: auto;
   gap: 3rem;
-  /* padding-left: 3rem; */
 }
 
 .nav-link {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
   gap: 1.2rem;
   font-family: Futura;
   font-size: 1.4rem;
   letter-spacing: 0.1rem;
   font-weight: 500;
+  flex: 1;
+  position: relative;
 }
 
-.navbar:hover {
-  width: 15%;
-  backdrop-filter: blur(16px);
+.navbar:hover .middle-box{
+  margin: 0;
 }
 
-@media screen and (max-width:961px) {
-  .navbar:hover{
-    width: 25%;
+.navbar:hover{
+  width: 200px;
+}
+
+
+.navbar:hover .nav-link{
+       flex-direction: row;
   }
-
-}
-
-
 
 .nav-link-text{
   opacity: 0;
-  display: none;
+  position: absolute;
+  z-index: -1;
 }
 
 
 .navbar:hover .nav-link-text{
-  display: block;
+  position: relative;
   opacity: 1;
 }
 

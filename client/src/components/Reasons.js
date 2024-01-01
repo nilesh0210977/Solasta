@@ -1,6 +1,7 @@
 import React from 'react'
 import Styles from "./Reason.module.scss";
 import SectionHeader from './SectionHeader';
+import {useNavigate} from "react-router-dom";
 
 import contactbtn from "../assets/contactbtn.png";
 import data from "../constants/sponsor";
@@ -12,18 +13,20 @@ const ServiceCard = ({ img, data }) => {
     return (
         <figure className={`${Styles['fig-container']} bg-white border-2 border-red-400`}>
             <img src={img} alt="Service image" />
-            <p>{data}</p>
+            <figcaption>{data}</figcaption>
         </figure>
     )
 }
 
 const Reason = () => {
 
+    const navigate = useNavigate();
+
     return (
         <section id="grid-section" className={Styles['service-section']} >
             <SectionHeader
-                color="#D5CBFE"
-                heading="10 Reasons to Sponsor"
+                color="#f05"
+                heading="Reasons to Sponsor"
                 along="SOLASTA"
             />
 
@@ -33,7 +36,7 @@ const Reason = () => {
 
 
             <div className="img-btn">
-                <img draggable={false} src={contactbtn} alt="Button" />
+                <img draggable={false} src={contactbtn} alt="Button" onClick={() => navigate("/teams")} />
             </div>
 
         </section>
