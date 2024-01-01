@@ -1,65 +1,25 @@
-import React, { useState } from "react";
-import { FaPlus, FaMinus } from "react-icons/fa";
-import "./styles/faq.css";
-import SectionHeader from "./SectionHeader";
+import React, { useState } from 'react'
+import Styles from "./Faq.module.scss";
+import Accordian from './Accordian';
+import { general, accomodation } from "../constants/faqs";
+import SectionHeader from './SectionHeader';
+import Button from './Button';
 
-function Faq() {
-  const [faqData, setFaqData] = useState([
-    {
-      question: "Lorem ipsum dolor sit amet consectetur, adipisicing elite ?",
-      answer:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur voluptate dicta rerum molestias animi distinctio quia sunt perspiciatis? Saepe ab consequatur itaque inventore asperiores quis tenetur placeat fugiat tempore laborum!",
-      isOpen: false,
-    },
-    {
-      question: "Lorem ipsum dolor sit amet consectetur, adipisicing elite ?",
-      answer:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur voluptate dicta rerum molestias animi distinctio quia sunt perspiciatis? Saepe ab consequatur itaque inventore asperiores quis tenetur placeat fugiat tempore laborum!",
-      isOpen: false,
-    },
-    {
-      question: "Lorem ipsum dolor sit amet consectetur, adipisicing elite ?",
-      answer:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur voluptate dicta rerum molestias animi distinctio quia sunt perspiciatis? Saepe ab consequatur itaque inventore asperiores quis tenetur placeat fugiat tempore laborum!",
-      isOpen: false,
-    },
-    {
-      question: "Lorem ipsum dolor sit amet consectetur, adipisicing elite ?",
-      answer:
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur voluptate dicta rerum molestias animi distinctio quia sunt perspiciatis? Saepe ab consequatur itaque inventore asperiores quis tenetur placeat fugiat tempore laborum!",
-      isOpen: false,
-    },
-    // Add more FAQ sections as needed
-  ]);
 
-  const toggleFaq = (index) => {
-    let newFaqData = [...faqData];
-    newFaqData[index].isOpen = !newFaqData[index].isOpen;
-    setTimeout(() => {
-      setFaqData(newFaqData);
-    }, 500);
-  };
 
+
+const Faq = () => {
+  const [btn, setBtn] = useState('General');
   return (
-    <div className="faq-main py-12 px-4 sm:px-12 lg:px-24">
-      <SectionHeader heading="FAQs" along="" color="#D5CBFE" />
-      {faqData.map((faq, index) => (
-        <div className="faq-sec" key={index} onClick={() => toggleFaq(index)}>
-          <div className="first-div">
-            <div className="second-div">
-              <div className="child-1">{faq.question}</div>
-              <div className={`child-2 ${faq.isOpen ? "visible" : ""}`}>
-                {faq.answer}
-              </div>
-            </div>
-            <div className="toggle-button">
-              {faq.isOpen ? <FaMinus /> : <FaPlus />}
-            </div>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
+    <section id="Faqs" className={`${Styles['faq-section']}  py-12 px-4 sm:px-12 lg:px-24 `}>
+      <SectionHeader color="#f05" heading="FAQs"/>
+      <div className={Styles.btnContainer}>
+        <Button name='General' className={btn === 'General' ? 'active' : 'notActive'} func={() => setBtn('General')} />
+        <Button name='Accomodation' className={btn === 'Accomodation' ? 'active' : 'notActive'} func={() => setBtn('Payment')} />
+      </div>
+      <Accordian data={btn === 'General' ? general : accomodation} />
+    </section>
+  )
 }
 
 export default Faq;

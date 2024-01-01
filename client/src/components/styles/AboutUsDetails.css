@@ -40,10 +40,14 @@
   color: #D6CDFF;
   text-align: justify;
   font-family: Lato;
-  font-size: 1rem;
+  font-size: 1.2rem;
   /* line-height: 1rem; */
-  @media screen and (min-width:1281px) {
-      font-size:1.5rem;
+}
+
+@media screen and (min-width:1281px) {
+  .aboutpara{
+    font-size:1.2rem;
+
   }
 }
 

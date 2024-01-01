@@ -27,12 +27,12 @@ const Navbar = () => {
 				<nav id="NavBar" className="navbar">
 					<img src={logo} alt="Blogger Logo" className="logo-img" />
 					<div className="middle-box">
-					{/* <Link to="/" className="nav-link" onClick={() => goToHash("grid-section")}></Link> */}
+						{/* <Link to="/" className="nav-link" onClick={() => goToHash("grid-section")}></Link> */}
 						<Link to="/" className={`nav-link ${section === 'home' && 'active'}`} onClick={() => goToHash('home')} >
-							<Icon icon='material-symbols:home-outline'  className="nav-link-icon"/>
+							<Icon icon='material-symbols:home-outline' className="nav-link-icon" />
 							<span className="nav-link-text"> Home</span>
 						</Link>
-						<Link to="/events" onClick={() => setSection('events')}  className={`nav-link ${section === 'events' && 'active'}`}>
+						<Link to="/events" onClick={() => setSection('events')} className={`nav-link ${section === 'events' && 'active'}`}>
 							<Icon icon='mdi:events' className="nav-link-icon" />
 							<span className="nav-link-text">Events</span>
 						</Link>
@@ -42,15 +42,23 @@ const Navbar = () => {
 							<span className="nav-link-text">Sponsor</span>
 						</Link>
 						<Link to="/" className={`nav-link ${section === 'about-section' && 'active'}`} onClick={() => goToHash("about-section")}>
-							<Icon icon="bytesize:portfolio" className="nav-link-icon"/>
+							<Icon icon="bytesize:portfolio" className="nav-link-icon" />
 							<span className="nav-link-text">About</span>
 						</Link>
-						<Link to="/teams" onClick={() => setSection("Teams")}   className={`nav-link ${section === 'Teams' && 'active'}`} >
-						<Icon  icon="clarity:group-line"  className="nav-link-icon"/>
+						<Link to="/teams" onClick={() => setSection("Teams")} className={`nav-link ${section === 'Teams' && 'active'}`} >
+							<Icon icon="clarity:group-line" className="nav-link-icon" />
 							<span className="nav-link-text">Teams</span>
 						</Link>
+							<a
+									href="https://docs.google.com/forms/d/e/1FAIpQLSda--XmXb30n94VlHDZtgPvoEo5DCvFi6k7qUgs9SJTQ5p-8w/formrestricted"
+									className="nav-link"
+								>
+									<Icon icon="mdi:register" className="nav-link-icon"/>
+									<span className="nav-link-text">Register Now</span>
+
+								</a>
 					</div>
-					<img src={udghosh} className="udgosh-img" alt="logo-img"/>
+					<img src={udghosh} className="udgosh-img" alt="logo-img" />
 				</nav>
 				<div className="nav-slide"></div>
 			</header>
@@ -99,18 +107,24 @@ const Navbar = () => {
 						<nav className={`${styles["middle-side"]} ${styles.mob}`}
 							data-active={active}>
 							<div>
-								<Link to="/" className="nav-link" onClick={() => goToHash("grid-section")}>
-									Sponsor Us
-								</Link>
 								<Link to="/" className="nav-link" onClick={() => goToHash("about-section")}>
 									About
-								</Link>
-								<Link to="/" className="nav-link" onClick={() => goToHash("Contact")}>
-									Contact Us
 								</Link>
 								<Link to="/events" className="nav-link">
 									Events
 								</Link>
+								<Link to="/teams" className="nav-link">
+									Teams
+								</Link>
+								<Link to="/" className="nav-link" onClick={() => goToHash("grid-section")}>
+									Sponsor Us
+								</Link>
+								<a
+									href="https://docs.google.com/forms/d/e/1FAIpQLSda--XmXb30n94VlHDZtgPvoEo5DCvFi6k7qUgs9SJTQ5p-8w/formrestricted"
+									className="quick-link"
+								>
+									Basic Registration Form
+								</a>
 								<img src={udghosh} className="udgosh-img" />
 							</div>
 						</nav>

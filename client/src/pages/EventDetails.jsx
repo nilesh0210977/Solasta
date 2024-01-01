@@ -7,11 +7,15 @@ const EventDetails = () => {
 
   const {id} = useParams();
   const [data, setData] = useState();
+  const [image,setImage] = useState(null);
+
 
   const fetchData = async(url) => {
     const res = await fetch(url);
     const data = await res.json();
-    console.log(data);
+
+   const module = await import(`../assets/server/${data.img}`)
+    setImage(module.default);
     setData(data); 
   }
 
@@ -19,11 +23,15 @@ const EventDetails = () => {
       fetchData(`http://65.2.6.123/admin/get-event-info/${id}`)
   },[id]);
 
+
+
+
+
   return (
     data && <div className="Event py-12 px-4 sm:px-12 lg:px-24">
       <div className="first-half">
         <div className="ed-image">
-          <img src={data?.img} alt={data?.title.png} />
+          <img src={image} alt={data?.title.png} />
         </div>
         <div className="title-div">
           <p className="title">{data?.title}</p>
@@ -79,22 +87,8 @@ const EventDetails = () => {
             <span>{data.venue}</span>
           </div>
         </div>
-        {/* <div className="mainContainer"> */}
-        <div className="grid-section-3">
-          <p className="rules-head">
-            <span class="material-symbols-outlined icon">
-              collections_bookmark
-            </span>
-            <Icon icon="flat-color-icons:rules" className="icons" />
-            Rule Book
-          </p>
-          <div className="flex flex-col gap-3 items-start  w-full">
-          {data?.ruleBook.map((rule) => <p className="rules">{rule}</p>)}
-
-          </div>
-          
-        </div>
-        <div className="grid-section-3">
+    
+         <div className="grid-section-3">
           <p className="rules-head">
             <Icon icon="flat-color-icons:rules" className="icons" />
             Description
@@ -105,7 +99,22 @@ const EventDetails = () => {
           </div>
           
         </div>
-        {/* </div> */}
+        <div className="grid-section-3">
+          <p className="rules-head">
+            <span class="material-symbols-outlined icon">
+              collections_bookmark
+            </span>
+
+            Rule Book
+          </p>
+          <div className="flex flex-col gap-3 items-start  w-full">
+          {data?.ruleBook.map((rule) => <p className="rules">{rule}</p>)}
+
+          </div>
+          
+        </div>
+       
+      
 
       </div>
     </div>

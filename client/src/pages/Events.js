@@ -10,9 +10,23 @@ import {fadeIn} from "../utils/motion";
 
 
 const EventCard = ({ _id, title, date, time, venue, img,}) => {
+
+  const [image,setImage] = useState(null);
+
+  useEffect(() => {
+    import(`../assets/server/${img}`)
+    .then((module) => {
+      setImage(module.default);
+    })
+    .catch((error) => {
+      console.log(error);
+    })
+  },[img])
+
+
   return (
     <motion.div variants={fadeIn("up", "spring", _id * 0.5, 0.75)}   className="mainCard cursor-pointer flex flex-col relative overflow-hidden text-white">
-        <img src={`../assets/server/${img}`} alt="" />
+        <img src={image} alt="" />
         <div className="hoverCard">
           <div className="flex flex-col gap-3">
             <p className="events-para"><Icon icon="uiw:date" /> - {date} </p>
@@ -34,45 +48,40 @@ const Events = () => {
 
   const location = useLocation();
   const category = location.state || 'All';
-  console.log(location.state);
-
-  const categories = ["All", "Dance", "Arts", "Music", "Technical", "Literature"];
-
-
+  const categories = ["All", "Performing arts", "Creative Arts", "Technical Events", "Fun Games", "Esports","Literary","Digital Arts","Pronites"];
+ 
   const [currentCategory, setCurrentCategory] = useState(category);
   const [list, setList] = useState([]);
   
 
   const changeCategory = (category) => {
     setCurrentCategory(category);
-    // http://localhost:5000/admin
-    if(category === "All") fetchData("http://65.2.6.123/admin/get-events");
-    else fetchData(`http://65.2.6.123/admin/get-events/${category}`);
+    fetchData("http://65.2.6.123/admin/get-events",category);
   }
 
 
-  const fetchData = async(url) => {
-    if(category && category !== "All") url = `${url}/${category}`
+  const fetchData = async(url,currentCategory) => {
+    // console.log(currentCategory)
+    if(currentCategory && currentCategory !== "All") url = `${url}/${currentCategory}`
     const res = await fetch(url);
     const data = await res.json();
-    console.log(data);
     setList(data); 
   }
 
   useEffect(() => {
     window.scrollTo(0,0);
-    fetchData("http://65.2.6.123/admin/get-events");
+    fetchData("http://65.2.6.123/admin/get-events",currentCategory);
   },[]);
 
 
   return (
-    <div className="" id="events">
+    <div className="eventsPage" id="events">
       <div className="events-section">
         <h1 className="event-head">Events</h1>
         <Timer className='timerEvents' />
       </div>
 
-      <div className="flex gap-4 justify-center items-center mt-4">
+      <div className="flex flex-wrap gap-4 justify-center items-center mt-4">
         {categories.map((category) =>
           <div onClick={() => changeCategory(category)} className={`border-2 text-white px-4 py-2 rounded-lg cursor-pointer ${category === currentCategory ? 'text-[#F05] border-2 border-[#F05]' : ''}`}>
             {category}
@@ -81,7 +90,7 @@ const Events = () => {
 
       </div>
 
-      <div className="events-container py-12 px-4 sm:px-8 lg:px-24">
+      <div className="events-container">
         {list?.map((event) => <EventCard {...event} />)}
       </div>
 

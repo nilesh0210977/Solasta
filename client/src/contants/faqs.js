@@ -1,6 +1,0 @@
-const data = [
-    {
-        question : " ",
-        answer : "",
-    }
-]

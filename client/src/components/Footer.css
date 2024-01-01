@@ -5,10 +5,11 @@
     color: white;
     font-family: Lato;
     padding: 3rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1.25fr; 
+    display: flex;
     gap: 2rem;
+    align-items: center;
 }
+
 
 .footer-logo {
     height: 10rem;
@@ -18,7 +19,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    gap: 2rem;
+    flex: 1;
+    /* justify-content: space-between; */
 
 }
 
@@ -38,11 +41,20 @@
 .contact-details {
     font-size: 1.2rem;
     color: rgb(219, 219, 219);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /* border: 3px solid red; */
+    /* gap: 1rem; */
 }
 
 .contact-link {
     text-decoration: none;
     color: rgb(219, 219, 219);
+    display: flex;
+    align-items: center;
+    /* border: 3px solid red; */
+    gap: 1rem;
 }
 
 .contact-icon {
@@ -68,11 +80,11 @@
 .social {
     background-color: #f05;
     padding: 1rem;
-    width: 70%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 8px;
+    margin-top: 2rem;
 }
 
 .social a img {
@@ -92,13 +104,15 @@
 }
 
 
-
-@media (max-width: 800px) {
-
-    #footer {
-        grid-template-columns: 1fr;
+@media screen and  (max-width:641px) {
+    #footer{
+        flex-direction: column;
     }
+}
 
+@media (max-width: 961px) {
+
+    
 
     .register-form {
         padding: 1rem;
@@ -107,6 +121,8 @@
 
     .social {
         width: 100%;
+        margin: auto;
+        margin-top: 2rem;
     }
 
     .single,

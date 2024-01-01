@@ -11,6 +11,11 @@ body {
     margin: 0;
 }
 
+@font-face {
+    font-family: Futura;
+    src: url("./assets//fonts/Futura\ Regular.ttf");
+}
+
 
 * {
     box-sizing: border-box;
@@ -87,73 +92,90 @@ body {
         text-shadow: 0 0 0 #dbd9ff;
     }
 
-    5% {
+    3% {
         content: 'S|';
         text-shadow: 0 0 0 #dbd9ff;
     }
 
-    10% {
+    6% {
         content: 'SO|';
+        text-shadow: 0 0 0 #dbd9ff;
+    }
+
+    9% {
+        content: 'SOL|';
+        text-shadow: 0 0 0 #dbd9ff;
+    }
+
+    12% {
+        content: 'SOLA|';
         text-shadow: 0 0 0 #dbd9ff;
     }
 
     15% {
-        content: 'SOL|';
-        text-shadow: 0 0 0 #dbd9ff;
-    }
-
-    20% {
-        content: 'SOLA|';
-        text-shadow: 0 0 0 #dbd9ff;
-    }
-
-    25% {
         content: 'SOLAS|';
         text-shadow: 0 0 0 #dbd9ff;
     }
 
-    30% {
+    18% {
         content: 'SOLAST|';
         text-shadow: 0 0 0 #dbd9ff;
     }
 
-    35% {
+    21% {
         content: 'SOLASTA|';
         text-shadow: 0 0 0 #dbd9ff;
     }
 
-    40% {
-        content: 'SOLASTA';
-        /* text-shadow: 0 0 0 #dbd9ff; */
+    24% {
+        content: "SOLASTA'2|";
+        text-shadow: 0 0 0px #dbd9ff;
+    }
+
+    27% {
+        content: "SOLASTA'24|";
+        text-shadow: 0 0 5px #dbd9ff;
+    }
+    30% {
+        content: "SOLASTA'24";
         text-shadow: 0 0 15px #dbd9ff;
     }
-
     70% {
-        content: 'SOLAST|';
-        text-shadow: 0 0 10px #dbd9ff;
+        content: "SOLASTA'2|";
+        text-shadow: 0 0 5px #dbd9ff;
     }
-
-    /* text-shadow: 0 0 15px #dbd9ff; */
-    75% {
+    73% {
+        content: "SOLASTA'2|";
+        text-shadow: 0 0 0px #dbd9ff;
+    }
+    76% {
+        content: "SOLASTA|";
+        text-shadow: 0 0 0px #dbd9ff;
+    }
+    79% {
+        content: "SOLAST";
+        text-shadow: 0 0 0px #dbd9ff;
+    }
+    82% {
         content: 'SOLAS|';
         text-shadow: 0 0 0 #dbd9ff;
 
     }
-    80% {
+    85% {
         content: 'SOLA|';
         text-shadow: 0 0 0 #dbd9ff;
 
     }
-    85% {
+    88% {
         content: 'SOL|';
         text-shadow: 0 0 0 #dbd9ff;
 
     }
-    90% {
+    91% {
         content: 'SO|';
         text-shadow: 0 0 0 #dbd9ff;
     }
-    95% {
+    94% {
         content: 'S|';
         text-shadow: 0 0 0 #dbd9ff;
     }
@@ -419,7 +441,7 @@ body {
 }
 
 .events-section::before{
-    background: url('./assets/bg1.png')no-repeat center center/cover;
+    background: url('./assets/EventsBanner.jpeg')no-repeat center center/cover;
     position:absolute;
     content: '';
     top: 0;
@@ -451,15 +473,15 @@ body {
 
 .events-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(200px,350px));
+    grid-template-columns: repeat(auto-fit,minmax(100px,360px));
     justify-content: center;
     margin-top: 4rem;
-    gap: 3rem;
+    gap: 2rem;
 }
 
 @media screen and (min-width:1025px) {
     .events-container{
-        gap:6rem;
+        gap:4rem;
     }
 }
     
@@ -493,3 +515,17 @@ body {
     font-size: 1.2rem;
     align-items: center;
 }
+
+
+.eventsPage{
+    /* width: calc(100vw - 82px);
+    margin-left: auto; */
+}
+
+@media screen and (min-width:800px) {
+    .eventsPage{
+        width: calc(100vw - 82px);
+        margin-left: auto;
+    }
+}
+

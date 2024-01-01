@@ -27,9 +27,16 @@
   }
 }
 
-.logo-img, .udgosh-img{
+.logo-img{
   width: 80px;
-  height: auto;
+  height: 80px;
+  object-fit: contain;
+}
+
+.udgosh-img{
+  width: 80px;
+  height: 40px;
+  object-fit: contain;
 }
 
 
@@ -37,6 +44,7 @@
   display: flex;
   flex-direction: column;
   gap: 3rem;
+  /* padding-left: 3rem; */
 }
 
 .nav-link {
@@ -65,18 +73,19 @@
 
 
 .nav-link-text{
+  opacity: 0;
   display: none;
 }
 
 
 .navbar:hover .nav-link-text{
   display: block;
+  opacity: 1;
 }
 
-.navbar:hover  .nav-link-icon{
-  transform: scale(1.2);
+.nav-link-icon{
+  font-size: 2rem;
 }
-
 
 .nav-link:hover .nav-link-icon,
 .nav-link:hover .nav-link-text {

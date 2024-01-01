@@ -1,0 +1,18 @@
+button{
+    background-color: #f05;
+    padding: 1rem;
+    font-weight: lighter;
+    border-radius:10px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: var(--fs-text);
+    font-weight: 600;
+}
+
+.notActive{
+    background-color: white;
+    color: #6F6C90;
+    border: 2px solid;
+}
