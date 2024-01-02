@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Days+One&display=swap');
+
+.Teams{
+   width: 100%;
+}
+
+@media screen and (min-width:800px) {
+    .Teams{
+        width: calc(100vw - 82px);
+        margin-left: auto;
+    }
+}
+
+.Teams .title{
+    /* color: #fff; */
+    font-family: Days One;
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+.Teams .Card{
+    width: 15rem;
+    height: 20rem;
+    background-color: blue;
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(12px);
+    /* background: hsla(0,0%,100%,.2); */
+    overflow: hidden;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.Teams .Card img{
+    height: 60%;
+    width: 100%;
+    object-fit: cover;
+}
+.Teams .Card p{
+    color: #fff;
+    font-family: Days One;
+    font-size: 1.2rem;
+}
+.Teams .Card .Icons{
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.Teams .Card .icon{
+    cursor: pointer;
+    height: 2rem;
+    width: 2rem;
+    object-fit: cover;
+    filter: invert(1);
+    transition: all 500ms ease-in-out;
+}
+.icon:hover{
+    transform: scale(1.1);
+}
