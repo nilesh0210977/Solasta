@@ -8,6 +8,14 @@
     display: flex;
     gap: 2rem;
     align-items: center;
+    
+}
+
+@media screen and (min-width:800px) {
+#footer{
+    width: calc(100vw - 82px);
+    margin-left: auto;
+}
 }
 
 

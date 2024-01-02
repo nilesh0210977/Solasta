@@ -1,9 +1,21 @@
 .below-register {
-    padding: 3rem;
+    /* padding: 3rem; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.RegisterPage{
+    padding-top: 96px;
+}
+
+@media screen and (min-width:800px) {
+    .RegisterPage{
+        width: calc(100vw - 82px);
+        margin-left: auto;
+      }
+    
 }
 
 .register-head {
@@ -25,13 +37,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 50%;
-    color: rgba(228, 255, 227, 0.829);
+    /* width: 50%; */
+    /* color: rgba(228, 255, 227, 0.829); */
+    color: white;
+    font-weight: 800;
     border-radius: 12px;
     background: rgba(0, 0, 0, 0.457);
     backdrop-filter: blur(12px);
     border: 2px solid rgb(255, 78, 137);
-    box-shadow: inset 0 0 10px rgba(255, 0, 85, 0.5), 0 0 9px 3px rgba(255, 0, 85, 0.495);
+    box-shadow: inset 0 0 10px #f05, 0 0 9px 3px #f05;
 
     font-family: Lato;
     line-height: 1.4rem;
@@ -46,11 +60,9 @@
 
 .submit-btn,
 .buy-btn-del {
-    width: 10rem;
-    height: 3rem;
     font-family: Lato;
     font-size: 1rem;
-    padding: 0.7em 2.7em;
+    padding: 1rem 2rem;
     letter-spacing: 0.06em;
     border-radius: 0.6em;
     overflow: hidden;

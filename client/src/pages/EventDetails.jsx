@@ -38,7 +38,7 @@ const EventDetails = () => {
         </div>
       </div>
       <div className="register-section">
-        <a className="event-register-btn" href="/register-form#">
+        <a className="event-register-btn" href={`${data.link}`}>
           Register Now{" "}
           <svg
             xmlns="http://www.w3.org/2000/svg"

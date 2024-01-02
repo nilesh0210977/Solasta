@@ -49,14 +49,11 @@ const Navbar = () => {
 							<Icon icon="clarity:group-line" className="nav-link-icon" />
 							<span className="nav-link-text">Teams</span>
 						</Link>
-							<a
-									href="https://docs.google.com/forms/d/e/1FAIpQLSda--XmXb30n94VlHDZtgPvoEo5DCvFi6k7qUgs9SJTQ5p-8w/formrestricted"
-									className="nav-link"
-								>
-									<Icon icon="mdi:register" className="nav-link-icon"/>
-									<span className="nav-link-text">Register</span>
+						<Link to="/register" onClick={() => setSection("Register")} className={`nav-link ${section === 'Register' && 'active'}`} >
+							<Icon icon="mdi:register" className="nav-link-icon" />
+							<span className="nav-link-text">Registers</span>
+						</Link>
 
-								</a>
 					</div>
 					<img src={udghosh} className="udgosh-img" alt="logo-img" />
 				</nav>
@@ -107,24 +104,26 @@ const Navbar = () => {
 						<nav className={`${styles["middle-side"]} ${styles.mob}`}
 							data-active={active}>
 							<div>
-								<Link to="/" className="nav-link" onClick={() => goToHash("about-section")}>
-									About
+								<Link to="/" className="nav-link" onClick={() => goToHash("home")}>
+									Home
 								</Link>
 								<Link to="/events" className="nav-link">
 									Events
 								</Link>
-								<Link to="/teams" className="nav-link">
-									Teams
-								</Link>
 								<Link to="/" className="nav-link" onClick={() => goToHash("grid-section")}>
 									Sponsor Us
 								</Link>
-								<a
-									href="https://docs.google.com/forms/d/e/1FAIpQLSda--XmXb30n94VlHDZtgPvoEo5DCvFi6k7qUgs9SJTQ5p-8w/formrestricted"
-									className="quick-link"
-								>
-									Register
-								</a>
+								<Link to="/" className="nav-link" onClick={() => goToHash("about-section")}>
+									About
+								</Link>
+								<Link to="/teams" className="nav-link">
+									Teams
+								</Link>
+								<Link to="/register" onClick={() => setSection("Register")} className={`nav-link ${section === 'Register' && 'active'}`} >
+									<Icon icon="mdi:register" className="nav-link-icon" />
+									<span className="nav-link-text">Register</span>
+								</Link>
+
 								<img src={udghosh} className="udgosh-img" />
 							</div>
 						</nav>
@@ -137,3 +136,5 @@ const Navbar = () => {
 	);
 };
 export default Navbar;
+
+

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import registerHero from "../assets/register6.jpg";
+import registerHero from "../assets/EventsBanner.jpeg";
 import Footer from "../components/Footer";
 import "../components/styles/Ticket.css";
 
@@ -20,7 +20,7 @@ export default function Register() {
   6.	Micro-maze- ₹75
   `;
 
-  const ins2 = `Solasta Pass for IIITDM Kurnool Students: Solasta’24 Official Merch (T-shirt) is compulsory for attending the events in Solasta.
+  const ins2 = `Solasta Pass for IIITDM Kurnool Students:\n Solasta’24 Official Merch (T-shirt) is compulsory for attending the events in Solasta.
  
   Benefits of this pass:
   1.	Access to attend all events
@@ -28,41 +28,33 @@ export default function Register() {
   3.	Access to attend Pronites (Celebrity Night, Rock Night,Fashion Show, DJ Night)
 `;
 
-  const [btnTxt, setBtnTxt] = useState("Next");
-  const [boxTxt, setBoxTxt] = useState(ins1);
-  const [status, setStatus] = useState(true);
-
-  const next = () => {
-    if (btnTxt === "Next") {
-      setBoxTxt(ins2);
-      setBtnTxt("Back");
-      setStatus(false);
-    } else {
-      setStatus(true);
-      setBoxTxt(ins1);
-      setBtnTxt("Next");
-    }
-  };
+  
   return (
-    <>
-      <div className="register-section">
+    <div className="RegisterPage">
+      <div className="register-section ">
         <img className="hero-background-sign" src={registerHero} alt="" />
-        <div className="below-register">
-          <p className="register-head">BUY NOW AND GET 50% OFF!</p>
+        <div className="below-register flex flex-col gap-8">
+          <p className="register-head ">BUY NOW AND GET 50% OFF!</p>
           <div className="register-form">
-            <p style={{ whiteSpace: "pre-line" }}>{boxTxt}</p>
-            <button hidden={status} className="submit-btn">
-              <a href="https://docs.google.com/forms/d/1tgIcYlUCVZeurZKUqUPkGZYtqCGTagggux7wC5AJB8c/">
+            <p style={{ whiteSpace: "pre-line" }}>{ins1}</p>
+            <button  className="submit-btn">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSda--XmXb30n94VlHDZtgPvoEo5DCvFi6k7qUgs9SJTQ5p-8w/formrestricted">
                 Buy Now
               </a>
             </button>
-            <button onClick={next} className="submit-btn">
-              {btnTxt}
+
+          </div>
+          <div className="register-form">
+            <p style={{ whiteSpace: "pre-line" }}>{ins2}</p>
+            <button  className="submit-btn">
+              <a href="https://docs.google.com/forms/d/e/1FAIpQLSda--XmXb30n94VlHDZtgPvoEo5DCvFi6k7qUgs9SJTQ5p-8w/formrestricted">
+                Buy Now
+              </a>
             </button>
+  
           </div>
         </div>
       </div>
-      <Footer />
-    </>
+    </div>
   );
 }
