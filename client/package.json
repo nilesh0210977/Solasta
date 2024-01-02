@@ -2,7 +2,7 @@
   "name": "solastaclient",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://solasta.vercel.app",
+  "proxy": "http://65.2.6.123",
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@iconify/react": "^4.1.1",

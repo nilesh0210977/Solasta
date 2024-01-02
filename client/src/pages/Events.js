@@ -65,6 +65,7 @@ const Events = () => {
     if(currentCategory && currentCategory !== "All") url = `${url}/${currentCategory}`
     const res = await fetch(url);
     const data = await res.json();
+    console.log(data);
     setList(data); 
   }
 
