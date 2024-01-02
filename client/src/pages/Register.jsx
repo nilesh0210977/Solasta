@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import registerHero from "../assets/EventsBanner.jpeg";
-import Footer from "../components/Footer";
 import "../components/styles/Ticket.css";
 
 export default function Register() {

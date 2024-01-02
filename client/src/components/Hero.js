@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/logo_large.png"
 import udghosh from "../assets/udghosh.png";
 
@@ -23,12 +24,11 @@ export default function Hero() {
       <img src={udghosh} className="max-w-[40%] lg:max-w-[20%]" alt="logo-img" />
       <p className="text-[1.3rem] text-white font-light hidden md:block" style={styles}>IIITDM KURNOOL</p>
       <button className="absolute bottom-0 lg:top-8 lg:bottom-auto lg:right-8 w-fit-content text-white">
-      <a
-        href="https://docs.google.com/forms/d/e/1FAIpQLSda--XmXb30n94VlHDZtgPvoEo5DCvFi6k7qUgs9SJTQ5p-8w/formrestricted"
+      <Link to = "/register"
         className="quick-link"
       >
         Register Now
-      </a></button>
+      </Link></button>
     </div>
   );
 }

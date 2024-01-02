@@ -51,7 +51,7 @@ const Navbar = () => {
 						</Link>
 						<Link to="/register" onClick={() => setSection("Register")} className={`nav-link ${section === 'Register' && 'active'}`} >
 							<Icon icon="mdi:register" className="nav-link-icon" />
-							<span className="nav-link-text">Registers</span>
+							<span className="nav-link-text">Register</span>
 						</Link>
 
 					</div>
@@ -120,8 +120,7 @@ const Navbar = () => {
 									Teams
 								</Link>
 								<Link to="/register" onClick={() => setSection("Register")} className={`nav-link ${section === 'Register' && 'active'}`} >
-									<Icon icon="mdi:register" className="nav-link-icon" />
-									<span className="nav-link-text">Register</span>
+									Register Now
 								</Link>
 
 								<img src={udghosh} className="udgosh-img" />

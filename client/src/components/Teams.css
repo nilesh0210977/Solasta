@@ -2,60 +2,136 @@
 
 .Teams{
    width: 100%;
+   padding-top: 102px;
 }
+
+.Teams::before{
+    position: fixed;
+    content: "";
+    top: 0;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background: url('../assets/EventsBanner.jpeg')no-repeat center center/cover;   
+    z-index: -1;
+}
+
 
 @media screen and (min-width:800px) {
     .Teams{
         width: calc(100vw - 82px);
         margin-left: auto;
+        padding:3rem;
+    }
+
+    .Teams::before{
+        left: 82px;
     }
 }
 
 .Teams .title{
-    /* color: #fff; */
     font-family: Days One;
-    font-size: 2rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    letter-spacing: 10px;
+    font-size: 1.8rem;
     text-align: center;
 }
+
+@media screen and (min-width:641px) {
+    .Teams .title{
+        font-size: 2.4rem;
+    }
+}
+
+
 .Teams .Card{
-    width: 15rem;
-    height: 20rem;
-    background-color: blue;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(12px);
-    /* background: hsla(0,0%,100%,.2); */
     overflow: hidden;
     border-radius: 12px;
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
+    padding-bottom: 2rem;
+    margin: auto;
 }
 .Teams .Card img{
-    height: 60%;
-    width: 100%;
-    object-fit: cover;
+    width: 210px;
+    max-width: 100%;
+    height: auto;
+    display: flex;
 }
+
+@media screen and (min-width:641px) {
+    .Teams .Card img{
+        width: 240px;
+    }
+
+}
+
 .Teams .Card p{
     color: #fff;
     font-family: Days One;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-align: center;
 }
+
+@media screen and (min-width:641px){
+    .Teams .Card p{
+        font-size: 1.3rem;
+    }
+}
+
+
 .Teams .Card .Icons{
     display: flex;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 1rem;
 }
-.Teams .Card .icon{
+
+
+.teamIcon{
     cursor: pointer;
-    height: 2rem;
-    width: 2rem;
-    object-fit: cover;
-    filter: invert(1);
-    transition: all 500ms ease-in-out;
+    transition: all 0.4s ease-in-out
 }
-.icon:hover{
+.teamIcon:hover{
     transform: scale(1.1);
+}
+
+
+
+
+.teamsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+.sectionContainer{
+    display: grid;
+     grid-template-columns: repeat(2,minmax(80px,240px));
+
+    margin-top: 1.5rem;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+@media screen and (min-width:961px) {
+    .sectionContainer{
+        display: flex;
+       flex-wrap: wrap;
+        /* grid-template-columns: repeat(4,minmax(140px,240px)); */
+    }
+}
+
+
+
+@media screen and (min-width:1800px) {
+    .subTeams{
+        gap: 8rem;
+    }
 }

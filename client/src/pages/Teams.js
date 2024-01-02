@@ -1,40 +1,24 @@
-import { useState } from "react"
 import TeamsCard from "../components/TeamsCard";
 import '../components/Teams.css';
-const Teams = ()=>{
-    const [data,setdata] = useState([
-        {
-            title : "Coordinators",
-            data : [
-                {
-                    name : "Aditya",
-                    img : "https://www.themoviedb.org/t/p/w500/3vIkgOe1aqA4DqZtefYkYm2LtD.jpg",
-                    instaLink : "https://www.instagram.com/lanarhoades/",
-                    linkedinLink: "https://www.linkedin.com/",
-                },
-            ]
-        },{
-            title : "Web Team",
-            data : [
-                {
-                    name : "Some random",
-                    img : "https://static.independent.co.uk/2023/10/10/14/newFile-3.jpg?quality=75&width=640&crop=3%3A2%2Csmart&auto=webp",
-                    instaLink : "https://www.instagram.com/miakhalifa/?hl=en",
-                    linkedinLink : "https://www.linkedin.com/"
-                }
-            ]
-        }
-    ])
+import data from "../constants/teams";
+
+const Teams = () => {
+  
     return (
-        <div className="Teams">
-            {
-                data.map((dt)=>{
-                    return (
-                    <TeamsCard data={dt}/>
-                    )
-                })
-            }
-            
+        <div className="Teams py-16 px-4 sm:px-12 lg:px-24">
+
+            <h1 className="text-[3rem] md:text-[5rem]  text-white  text-center">Team Solasta</h1>
+            <div className="teamsContainer">
+
+            <TeamsCard data={data[0]}/>
+
+            <div className="flex flex-col lg:flex-row gap-8 subTeams">
+                    <TeamsCard data={data[1]}/>
+                    <TeamsCard data={data[2]}/>
+            </div>
+
+            </div>
+
         </div>
     )
 }

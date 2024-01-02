@@ -1,4 +1,5 @@
 
+import { Icon } from '@iconify/react';
 import Instagram from '../assets/instagram.png'
 import LinkedIn from '../assets/Linkedln.png'
 const UserCard = ({details})=>{
@@ -7,8 +8,9 @@ const UserCard = ({details})=>{
             <img src={details.img}/>
             <p>{details.name}</p>
             <div className='Icons'>
-                <a href={details.instaLink} target='_blank'><img src={Instagram} className='icon'/></a>
-                <a href={details.linkedinLink} target='_blank'><img src={LinkedIn} className='icon'/></a>
+            <Icon className='text-3xl text-white teamIcon' onClick={() => window.open(`${details.instaLink}`)} icon="mdi:instagram"/>
+            <Icon className='text-3xl text-white teamIcon' onClick={() => window.open(`${details.instaLink}`)} icon="mdi:linkedin"/>
+    
             </div>
         </div>
     )
