@@ -66,7 +66,68 @@ const general =[
     },
   ]
   
-const accomodation = [];
+const accomodation = [
+  {
+    question: "What are the rules for smoking and alcohol?",
+    answer: "Smoking and alcohol are strictly prohibited on the hostel/hotel premises.",
+    isOpen: false,
+  },
+  {
+    question: "Who is responsible for luggage security?",
+    answer: "Students are responsible for their luggage security.",
+    isOpen: false,
+  },
+  {
+    question: "Can students who haven't opted for accommodation enter the hostel?",
+    answer: "Students who have not opted for accommodation will not be allowed to enter the hostel.",
+    isOpen: false,
+  },
+  {
+    question: "What happens if facilities provided are found damaged?",
+    answer: "If any of the facilities provided are found damaged, the security charges will not be refunded back, and an extra charge can be imposed depending on the extent of damage.",
+    isOpen: false,
+  },
+  {
+    question: "Are there rules for students staying inside the campus?",
+    answer: "Yes, students staying inside the campus have to follow college rules for the main gate entrance as well.",
+    isOpen: false,
+  },
+  {
+    question: "Will students have to share rooms?",
+    answer: "Yes, students may have to share rooms with other college students.",
+    isOpen: false,
+  },
+  {
+    question: "What are the restrictions for students attending the fest?",
+    answer: "Students coming to the fest should not roam here and there and must not enter OPD, IPD, or any place not authorized.",
+    isOpen: false,
+  },
+  {
+    question: "What are the consequences of indisciplinary acts?",
+    answer: "In case of any indisciplinary act, accommodation may be cancelled and security money will not be refunded.",
+    isOpen: false,
+  },
+  {
+    question: "Are there any restrictions on campus property?",
+    answer: "No damage should be done to any campus property.",
+    isOpen: false,
+  },
+  {
+    question: "Is there a requirement to sign an undertaking for accommodation?",
+    answer: "All are required to sign an undertaking regarding accommodation prior to the allotment of rooms.",
+    isOpen: false,
+  },
+  {
+    question: "What is the refund policy?",
+    answer: "In any circumstances leading to a cancellation, we will not be able to provide a refund except for the security deposit.",
+    isOpen: false,
+  },
+  {
+    question: "Are prices subject to change?",
+    answer: "Prices are subject to increase according to availability.",
+    isOpen: false,
+  },
+];
 
 
 export {general, accomodation}
