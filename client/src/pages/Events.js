@@ -56,7 +56,7 @@ const Events = () => {
 
   const changeCategory = (category) => {
     setCurrentCategory(category);
-    fetchData("http://65.2.6.123/admin/get-events",category);
+    fetchData("https://solasta.vercel.app/admin/get-events",category);
   }
 
 
@@ -71,7 +71,7 @@ const Events = () => {
 
   useEffect(() => {
     window.scrollTo(0,0);
-    fetchData("http://65.2.6.123/admin/get-events",currentCategory);
+    fetchData("https://solasta.vercel.app/admin/get-events",currentCategory);
   },[]);
 
 

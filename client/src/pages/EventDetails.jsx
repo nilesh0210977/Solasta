@@ -20,7 +20,7 @@ const EventDetails = () => {
   }
 
   useEffect(() => {
-      fetchData(`http://65.2.6.123/admin/get-event-info/${id}`)
+      fetchData(`https://solasta.vercel.app/admin/get-event-info/${id}`)
   },[id]);
 
 
