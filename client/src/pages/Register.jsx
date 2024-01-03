@@ -33,7 +33,7 @@ export default function Register() {
       <div className="register-section ">
         <img className="hero-background-sign" src={registerHero} alt="" />
         <div className="below-register flex flex-col gap-8">
-          <p className="register-head ">BUY NOW AND GET 50% OFF!</p>
+          <p className="register-head ">EARLY BIRD REGISTERATION BUY NOW AND GET 50% OFF!</p>
           <div className="register-form">
             <p style={{ whiteSpace: "pre-line" }}>{ins1}</p>
             <button  className="submit-btn">
@@ -43,7 +43,7 @@ export default function Register() {
             </button>
 
           </div>
-          <div className="register-form">
+          {/* <div className="register-form">
             <p style={{ whiteSpace: "pre-line" }}>{ins2}</p>
             <button  className="submit-btn">
               <a href="https://docs.google.com/forms/d/e/1FAIpQLSda--XmXb30n94VlHDZtgPvoEo5DCvFi6k7qUgs9SJTQ5p-8w/formrestricted">
@@ -51,7 +51,7 @@ export default function Register() {
               </a>
             </button>
   
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
