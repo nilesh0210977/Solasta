@@ -26,7 +26,7 @@ router.post("/add-event", async (req, res) => {
     console.log(req.body);
 
     try {
-        const event = await Event.create({ ...req.body, ruleBook: req.body.ruleBook.split("."), description : req.body.description.split(".") });
+        const event = await Event.create({ ...req.body, ruleBook: req.body.ruleBook.split("#"), description : req.body.description.split("#") });
         console.log(event)
         res.redirect("/admin");
         return "Success";
@@ -61,7 +61,7 @@ router.post("/save-event/:id", async (req, res) => {
     const { id } = req.params;
     let event = await Event.findOne({_id : id });
     if (event) {
-        const updateEvent = await Event.updateOne({_id:id }, { ...req.body, ruleBook: req.body.ruleBook.split("."), description : req.body.description.split(".") }, { new: true });
+        const updateEvent = await Event.updateOne({_id:id }, { ...req.body, ruleBook: req.body.ruleBook.split("#"), description : req.body.description.split("#") }, { new: true });
         console.log(updateEvent); 
         res.redirect("/admin");
         //  res.json("Updated Success");

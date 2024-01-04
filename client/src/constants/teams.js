@@ -13,7 +13,7 @@ const data = [
             {
                 name: "Suman Shekhar",
                 img: team7,
-                 instaLink: "https://www.instagram.com/harish__seervi17/",
+                 instaLink: "https://www.instagram.com/ssumanshekhar/",
                 linkedinLink: "https://www.linkedin.com/in/suman-shekhar-59847822a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
             },
             {
@@ -71,19 +71,19 @@ const data = [
             {
                 name: "Sohaib Aftab",
                 img: team10,
-                instaLink: "https://www.instagram.com/harish__seervi17/",
-                linkedinLink: "https://www.linkedin.com/in/harish-choudhary17/"
+                instaLink: "https://www.instagram.com/sohaibaftab.29/",
+                linkedinLink: "https://www.linkedin.com/in/sohaibaftab/"
             }
         ]
     }
-    , {
+    ,{
         title: "Sponsors Team",
         data: [
             {
                 name: "Devesh Kumar",
                 img: team9,
-                instaLink: "https://www.instagram.com/harish__seervi17/",
-                linkedinLink: "https://www.linkedin.com/"
+                instaLink: "https://www.instagram.com/_devesharya__/",
+                linkedinLink: ""
             },
             {
                 name: "Aditya Pandey",

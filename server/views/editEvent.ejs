@@ -73,10 +73,10 @@
             <input type="text" value="<%= event.link %>" name="link" id="link" />
         
             <label for="description">Description: </label>
-            <textarea rows="{6}" id="description" name="description"><%= event.description.join('.') %></textarea>
+            <textarea rows="{6}" id="description" name="description"><%= event.description.join('#') %></textarea>
 
             <label for="rules">Rule book: </label>
-            <textarea rows="{6}" id="rules" name="ruleBook"><%= event.ruleBook.join('.') %></textarea>
+            <textarea rows="{6}" id="rules" name="ruleBook"><%= event.ruleBook.join('#') %></textarea>
 
 
             <button type="submit">Submit</button>
