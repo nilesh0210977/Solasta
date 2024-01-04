@@ -17,10 +17,11 @@ import team7 from "./teams/team7.png";
 import team8 from "./teams/team8.jpg";
 import team9 from "./teams/team9.jpg";
 import team10 from "./teams/team10.jpg";
+import team11 from "./teams/team11.jpg";
 
 
 
 export {
     cat1, cat2, cat3, cat4, cat5, cat6, cat7, cat8,
-    team1, team2, team3, team4, team5, team6, team7, team8, team9, team10
+    team1, team2, team3, team4, team5, team6, team7, team8, team9, team10, team11
 };

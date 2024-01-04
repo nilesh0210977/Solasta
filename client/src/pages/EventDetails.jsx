@@ -63,7 +63,7 @@ const EventDetails = () => {
       </div>
       <div className="Data">
         <div className="grid-section-1">
-          <div className="subgrids-1">Registration Fees: {data.registrationFee}</div>
+        {data.registrationFee > 0 && <div className="subgrids-1">Registration Fees: {data.registrationFee}</div> }
           <div className="subgrids-1">Type: {data.type}</div>
           <div className="subgrids-1 flex gap-2"><Icon icon='bi:trophy' />Prize Pool:{data.prizePool}</div>
         </div>

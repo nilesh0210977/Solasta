@@ -75,7 +75,6 @@
     color: #fff;
     font-family: Days One;
     font-size: 1rem;
-    margin-top: 1rem;
     text-align: center;
 }
 
@@ -85,6 +84,11 @@
     }
 }
 
+
+.designation{
+    font-size: 0.8rem !important;
+
+}
 
 .Teams .Card .Icons{
     display: flex;
