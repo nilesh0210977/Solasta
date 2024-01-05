@@ -6,12 +6,12 @@ const general =[
     },
     {
       question: "Can I transfer my ticket to someone else?",
-      answer: "No, tickets are non-transferable.",
+      answer: "Yes, tickets can be  transfered.",
     
     },
     {
       question: "Can I re-enter the venue for ticketed shows?",
-      answer: "Re-entry is strictly prohibited, except for medical emergencies.",
+      answer: "Yes, you can re-enter if you are inside the campus",
     
     },
     {
@@ -34,14 +34,14 @@ const general =[
       answer: "Stall vendors receive colored wristbands; loss or tampering will not be replaced.",
     
     },
-    {
-      question: "Can organizers deny entry?",
-      answer: "Yes, the organizing team reserves the right to deny entry.",
+    // {
+    //   question: "Can organizers deny entry?",
+    //   answer: "Yes, the organizing team reserves the right to deny entry.",
     
-    },
+    // },
     {
       question: "Can I get a refund for my ticket?",
-      answer: "No, refund requests will not be entertained under any circumstances.",
+      answer: "Yes, tickets are refundable after proper verification by Security",
     
     },
     {
@@ -49,27 +49,27 @@ const general =[
       answer: "All payments modes, including cash and UPI, are acceptable.",
     
     },
-    {
-      question: "What items are not allowed?",
-      answer: "Items like photographic equipment (except mobile phones), bags, helmets, etc., are strictly prohibited.",
+    // {
+    //   question: "What items are not allowed?",
+    //   answer: "Items like photographic equipment (except mobile phones), bags, helmets, etc., are strictly prohibited.",
     
-    },
+    // },
     {
       question: "Is smoking and alcohol allowed inside the campus?",
       answer: "No, smoking and alcohol are strictly prohibited.",
     
     },
-    {
-      question: "How can I ensure my safety?",
-      answer: "Cooperate with the security and safety team and follow the rules.",
+    // {
+    //   question: "How can I ensure my safety?",
+    //   answer: "Cooperate with the security and safety team and follow the rules.",
     
-    },
+    // },
   ]
   
 const accomodation = [
   {
     question: "Who is responsible for luggage security?",
-    answer: "Students are responsible for their luggage security.",
+    answer: "Individuals are responsible for their luggage security.",
     isOpen: false,
   },
   {
@@ -102,11 +102,11 @@ const accomodation = [
     answer: "In case of any indisciplinary act, accommodation may be cancelled and security money will not be refunded.",
     isOpen: false,
   },
-  {
-    question: "Are there any restrictions on campus property?",
-    answer: "No damage should be done to any campus property.",
-    isOpen: false,
-  },
+  // {
+  //   question: "Are there any restrictions on campus property?",
+  //   answer: "No damage should be done to any campus property.",
+  //   isOpen: false,
+  // },
   {
     question: "Is there a requirement to sign an undertaking for accommodation?",
     answer: "All are required to sign an undertaking regarding accommodation prior to the allotment of rooms.",
