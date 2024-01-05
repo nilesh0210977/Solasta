@@ -11,11 +11,6 @@ body {
     margin: 0;
 }
 
-@font-face {
-    font-family: Futura;
-    src: url("./assets//fonts/Futura\ Regular.ttf");
-}
-
 
 * {
     box-sizing: border-box;
@@ -196,7 +191,8 @@ body {
 
 .hero-subhead {
     color: #D6CDFF;
-    font-family: Samarkan;
+    /* font-family: Samarkan; */
+    /* border: 3px solid red; */
     font-size: 6rem;
     font-style: normal;
     font-weight: 400;
@@ -339,8 +335,10 @@ body {
 .heading {
     color: #FFF;
     text-align: center;
-    font-family: Futura;
-    font-size: 1rem;
+    /* font-family: Futura; */
+    font-family: Lato;
+
+    font-size: 1.4rem;
     font-style: condensed;
     font-weight: 500;
     line-height: normal;

@@ -2,6 +2,9 @@ import React from "react";
 import logo from "../assets/logo_large.png";
 import "./styles/AboutUsDetails.css"; // Create a separate CSS file for styling
 
+
+import pdf from "../assets/brochure_final.pdf";
+
 const AboutUsDetails = () => {
   return (
     <div className="flex  items-center justify-center flex-col lg:flex-row  gap-4 md:gap-8 mt-20">
@@ -19,9 +22,10 @@ const AboutUsDetails = () => {
           future for art.
         </p>
 
-        <a class="fancy" href="/" >
+
+        <a class="fancy" href={pdf}  download="Solasta'24_Brochure_IIITK">
           <span class="top-key"></span>
-          <a href="../assets/brochure_final.pdf" download="Solasta'24_Brochure_IIITK" className="text" >Download Brochure</a>
+          <p className="text" >Download Brochure</p>
           <span class="bottom-key-1"></span>
           <span class="bottom-key-2"></span>
         </a>

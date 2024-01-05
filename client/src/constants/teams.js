@@ -37,7 +37,7 @@ const data = [
                 name: "Deepak Kumar",
                 img: team2,
                 designation:"Finance Lead",
-                instaLink: "https://www.instagram.com/deepak_kr._?igsh=MWJsZjdidTdybzVjaw==",
+                instaLink: "",
                 linkedinLink: "https://www.linkedin.com/in/deepak-kumar-697310225?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
             },
             
@@ -90,11 +90,11 @@ const data = [
         title: "Sponsors Team",
         data: [
             {
-                name: "Devesh Kumar",
+                name: "Devesh Arya",
                 img: team9,
                 designation : "Sponsor Lead",
                 instaLink: "https://www.instagram.com/_devesharya__/",
-                linkedinLink: ""
+                linkedinLink: "https://www.linkedin.com/in/devesh6395/"
             },
             {
                 name: "Aditya Pandey",

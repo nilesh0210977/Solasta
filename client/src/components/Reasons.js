@@ -35,9 +35,9 @@ const Reason = () => {
             </div>
 
 
-            <div className="img-btn">
+            {/* <div className="img-btn">
                 <img draggable={false} src={contactbtn} alt="Button" onClick={() => navigate("/teams")} />
-            </div>
+            </div> */}
 
         </section>
     )

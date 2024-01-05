@@ -1,5 +1,5 @@
 import sp1 from "../assets/Sponsor1.jpg";
-import sp2 from "../assets/Sponsor2.png";
+import sp2 from "../assets/Sponsor2.jpg";
 import sp3 from "../assets/Sponsor3.jpg";
 import sp4 from "../assets/Sponsor4.jpg";
 import sp5 from "../assets/Sponsor5.avif";

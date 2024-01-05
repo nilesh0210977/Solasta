@@ -68,11 +68,6 @@ const general =[
   
 const accomodation = [
   {
-    question: "What are the rules for smoking and alcohol?",
-    answer: "Smoking and alcohol are strictly prohibited on the hostel/hotel premises.",
-    isOpen: false,
-  },
-  {
     question: "Who is responsible for luggage security?",
     answer: "Students are responsible for their luggage security.",
     isOpen: false,
@@ -127,6 +122,11 @@ const accomodation = [
     answer: "Prices are subject to increase according to availability.",
     isOpen: false,
   },
+  {
+    question: "Is Smoking allowed in campus?",
+    answer: "Smoking and alcohol are strictly prohibited on the hostel/hotel premises.",
+    isOpen: false,
+  }
 ];
 
 

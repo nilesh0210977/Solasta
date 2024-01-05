@@ -15,7 +15,7 @@ export default function Footer() {
         <div className="address">
           <img className="footer-logo" src={logo} alt="Anahata" />
           <p className="college-address">
-            Indian Institute of Information Technology Design and Manufacturing, Kurnool, Andhra Pradesh (518007), INDIA
+            Indian Institute of Information Technology Design and Manufacturing, Kurnool, Andhra Pradesh (518008), INDIA
           </p>
         </div>
         {/* <div className="quick-links">
@@ -35,34 +35,15 @@ export default function Footer() {
             <p className="contact-header">Contact Us</p>
             {/* <p>Coordinator : </p> */}
             <div className="sm:grid grid-cols-1 gap-3  md:grid-cols-2  xl:grid-cols-3">
-            <a className="contact-link" href="tel:82908 44112">
+            <a className="contact-link" href="tel:7999548368">
               <img className="contact-icon" src={callIcon} alt="" />
               Aditya Pandey
             </a>
-           
-            <a className="contact-link" href="tel:6201901436">
-              <img className="contact-icon" src={callIcon} alt="" />
-              Deepak Kumar
-            </a>
-    
-            <a className="contact-link" href="tel:94669 40577">
-              <img className="contact-icon" src={callIcon} alt="" />
-                Suman Sekhar
-            </a>
+        
 
-            <a className="contact-link" href="tel:73678 99923">
-              <img className="contact-icon" src={callIcon} alt="" />
-              Shivshankar Kumar
-            </a>
-
-            <a className="contact-link" href="tel:82703 24996">
-              <img className="contact-icon" src={callIcon} alt="" />
-              Preethi B.
-            </a>
             </div>
 
-      
-      
+    
           </div>
           <div className="social">
           <a href="https://www.instagram.com/iiitk.solasta?igsh=MWExODFwMXhucGxreA==" target="_blank" rel="noopener noreferrer">

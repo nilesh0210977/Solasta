@@ -8,12 +8,7 @@ import udghosh from "../assets/udghosh.png";
 export default function Hero() {
 
   const styles = {
-    // position: 'absolute',
-    // bottom: "50%",
-    // right: 0,
-    // transform: 'translate(45%,0) rotate(-90deg)',
     letterSpacing: "0.5rem",
-    // display:'none'
   }
 
 
