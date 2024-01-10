@@ -55,7 +55,7 @@ const Navbar = () => {
 						</Link>
 
 					</div>
-					<img src={udghosh} className="udgosh-img" alt="logo-img" />
+					{/* <img src={udghosh} className="udgosh-img" alt="logo-img" /> */}
 				</nav>
 				<div className="nav-slide"></div>
 			</header>
@@ -123,7 +123,7 @@ const Navbar = () => {
 									Register Now
 								</Link>
 
-								<img src={udghosh} className="udgosh-img" />
+								{/* <img src={udghosh} className="udgosh-img" /> */}
 							</div>
 						</nav>
 					</aside>
