@@ -5,7 +5,7 @@ import registerbtn from "../assets/registerbtn.png";
 import SectionHeader from "./SectionHeader";
 
 export default function Timer(props) {
-  const targetDate = "2024-02-25:00:00";
+  const targetDate = "2024-02-23:00:00";
   const calculateTimeLeft = () => {
     const difference = new Date(targetDate) - new Date();
     if (difference <= 0) {
