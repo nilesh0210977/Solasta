@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import styles from "./Navbar.module.scss";
 import udghosh from "../assets/udghosh.png";
 import logo from "../assets/logo.png";
-// import "./styles/Navbar.css";
 import "./Navbar.css";
 import { Outlet, Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
@@ -27,7 +26,7 @@ const Navbar = () => {
 				<nav id="NavBar" className="navbar">
 					<img src={logo} alt="Blogger Logo" className="logo-img" />
 					<div className="middle-box">
-						{/* <Link to="/" className="nav-link" onClick={() => goToHash("grid-section")}></Link> */}
+						{}
 						<Link to="/" className={`nav-link ${section === 'home' && 'active'}`} onClick={() => goToHash('home')} >
 							<Icon icon='material-symbols:home-outline' className="nav-link-icon" />
 							<span className="nav-link-text"> Home</span>
@@ -55,7 +54,7 @@ const Navbar = () => {
 						</Link>
 
 					</div>
-					{/* <img src={udghosh} className="udgosh-img" alt="logo-img" /> */}
+					{}
 				</nav>
 				<div className="nav-slide"></div>
 			</header>
@@ -123,7 +122,7 @@ const Navbar = () => {
 									Register Now
 								</Link>
 
-								{/* <img src={udghosh} className="udgosh-img" /> */}
+								{}
 							</div>
 						</nav>
 					</aside>

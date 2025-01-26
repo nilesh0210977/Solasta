@@ -14,12 +14,15 @@ const AboutUsDetails = () => {
       <div className="vertical-line"></div>
       <div className="right  flex flex-col gap-8">
         <p className="aboutpara">
-          The Indian Institute of Information Technology, Design & Manufacturing, Kurnool (IIITDMK)  was announced in 2014 after receiving the assent of President of India to the Institutes  of Information Technology Act, 2014. Fully funded by Ministry of Education. IIITDM Kurnool was accorded the status of Institute of National Importance by making an amendment in the IIIT act 2014 on August 03, 2017. 
+          The Indian Institute of Information Technology, Design & Manufacturing, Kurnool (IIITDM Kurnool) was established in 2014 following the President of India's approval of the Institutes of Information Technology Act, 2014. Fully funded by the Ministry of Education, this prestigious institution was elevated to the status of an Institute of National Importance on August 3, 2017, through a significant amendment to the IIIT Act. IIITDM Kurnool is a beacon of academic excellence, innovation, and transformative education.
           </p>
         <p className="aboutpara">
 
-          SOLASTA is the annual Techno-cultural festival of IIITDM Kurnool. Started in 2019, it is now the biggest event of its kind in not only the Kurnool city but also the greater Rayalaseema region. It attracts an annual footfall of over 10,000 from more than 50 colleges across the region and has prize money worth over 300k. It offers budding talents the opportunity to interact, enhance and demonstrate their creativity and talent. IIITDM Kurnool strives to spread the message of art amongst the youth and doing everything to ensure the glorious
-          future for art.
+        SOLASTA, the flagship Techno-Cultural extravaganza of IIITDM Kurnool, has been a cornerstone of the institute's legacy since its inception in 2019. Recognized as the grandest festival of its kind not only in Kurnool city but across the greater Rayalaseema region, SOLASTA has become a vibrant platform that celebrates talent, creativity, and innovation. With an astounding annual footfall exceeding 10,000 attendees from over 50 prestigious colleges in the region, the event showcases thrilling competitions, artistic brilliance, and technological marvels, offering a staggering prize pool worth over ₹3,00,000.
+        </p>
+        <p className="aboutpara">
+
+        SOLASTA provides aspiring talents with a unique opportunity to connect, collaborate, and showcase their potential. Through this cultural spectacle, IIITDM Kurnool passionately advocates for the growth of artistic and technological pursuits among the youth, ensuring a brighter and more glorious future for art and innovation.
         </p>
 
 

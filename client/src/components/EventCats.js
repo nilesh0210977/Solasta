@@ -1,10 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { EffectCoverflow } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css/effect-coverflow";
-import "swiper/css";
-
+import { EffectCoverflow } from "swiper"; 
+import 'swiper/swiper-bundle.min.css'; 
 import { cat1, cat2, cat3, cat4, cat5, cat6, cat7, cat8 } from "../assets";
 import participatebtn from "../assets/participatebtn.png";
 import "./styles/card.css";
@@ -16,42 +14,13 @@ const EventCats = () => {
   const navigate = useNavigate();
 
   const data = [
-    {
-      img: cat1,
-      category: "Performing arts",
-    },
-    {
-      img: cat2,
-      category: "Creative Arts",
-    },
-    {
-      img: cat3,
-      category: "Technical Events",
-    },
-    {
-      img: cat4,
-      category: "Literary",
-    },
-    {
-      img: cat5,
-      category: "Esports",
-    },
-    {
-      img: cat6,
-      category: "Fun Games",
-    },
-    {
-      img: cat7,
-      category: "Digital Arts",
-    },
-    {
-      img: cat8,
-      category: "Pronites",
-    },
-  ]
-
-
-
+    { img: cat1, category: "Performing arts", title: "Performing Arts", description: "An exciting event showcasing various forms of performing arts." },
+    { img: cat2, category: "Creative Arts", title: "Creative Arts", description: "A display of creativity through various artistic mediums." },
+    { img: cat3, category: "Technical Events", title: "Technical Events", description: "Engage in hands-on technical challenges and innovations." },
+    { img: cat4, category: "Literary", title: "Literary Events", description: "Explore the world of literature and creative writing." },
+    { img: cat5, category: "Esports", title: "Esports", description: "Compete in thrilling online and offline gaming tournaments." },
+    
+  ];
 
   return (
     <section id="event-categories" className="py-12 px-4 sm:px-12 lg:px-24">
@@ -61,7 +30,7 @@ const EventCats = () => {
         loop={true}
         centeredSlides={true}
         centeredSlidesBounds={true}
-        modules={[EffectCoverflow]}
+        modules={[EffectCoverflow]} 
         slidesPerView={1.3}
         spaceBetween={30}
         breakpoints={{
@@ -86,11 +55,25 @@ const EventCats = () => {
         data-name="hero-swiper"
         data-page="landing"
       >
-
-        {data.map((details) => <SwiperSlide><Card image={details.img} category={details.category} title="Details" /></SwiperSlide>)}
+        {data.map((details, index) => (
+          <SwiperSlide key={index}>
+            <Card
+              image={details.img}
+              category={details.category}
+              title={details.title}
+              description={details.description}
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
       <div className="img-btn">
-        <img draggable={false} src={participatebtn} onClick={() => navigate("/events")} alt="Button" className="cursor-pointer" />
+        <img
+          draggable={false}
+          src={participatebtn}
+          onClick={() => navigate("/events")}
+          alt="Button"
+          className="cursor-pointer"
+        />
       </div>
     </section>
   );
