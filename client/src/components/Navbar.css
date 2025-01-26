@@ -7,93 +7,111 @@
   top: 0;
   z-index: 999;
   height: 100vh;
-  padding: 0.5rem;
-  color: white;
-  transition: 0.5s all ease-in-out;
-  width: 80px;
-  background: rgba(255,255,255,0.1);
-  backdrop-filter: blur(8px);
-  box-shadow: 0 1px 10px 2px rgba(0, 0, 0, 0.4);
+  padding: 1.5rem;
+  color: #fff;
+  width: 100px;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  border-right: 2px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.5s ease;
 }
 
-.desktopNav{
-  display: none;
-
+.navbar:hover {
+  width: 300px;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
 }
 
-@media screen and (min-width : 800px) {
-  .desktopNav{
-    display: block;
-  }
-}
-
-.logo-img{
-  width: 80px;
-  height: 80px;
+.logo-img {
+  width: 90px;
+  height: 90px;
   object-fit: contain;
-  /* margin: 0 auto; */
+  border-radius: 50%;
+  box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+  background-color: transparent; 
+  transition: transform 0.4s ease;
 }
 
 
-.udgosh-img{
-  width: 80px;
-  height: 40px;
-  object-fit: contain;
-   /* margin: 0 auto; */
+.logo-img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(255, 105, 97, 0.8), 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
 
-.middle-box{
+.middle-box {
   display: flex;
   flex-direction: column;
-  gap: 3rem;
+  gap: 2.5rem;
 }
 
 .nav-link {
   display: flex;
-  gap: 1.2rem;
-  font-family: Futura;
-  font-size: 1.4rem;
-  letter-spacing: 0.1rem;
-  font-weight: 500;
-  flex: 1;
+  align-items: center;
+  gap: 1.5rem;
+  font-family: "Futura", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 0.15rem;
+  color: #fff;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.navbar:hover .middle-box{
-  margin: 0;
+.nav-link-icon {
+  font-size: 2.5rem;
+  transition: transform 0.4s ease, color 0.4s ease;
 }
 
-.navbar:hover{
-  width: 200px;
-}
-
-
-.navbar:hover .nav-link{
-       flex-direction: row;
-  }
-
-.nav-link-text{
+.nav-link-text {
   opacity: 0;
   position: absolute;
-  z-index: -1;
+  white-space: nowrap;
+  transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+  transform: translateX(-20px);
 }
 
+.navbar:hover .nav-link {
+  flex-direction: row;
+}
 
-.navbar:hover .nav-link-text{
-  position: relative;
+.navbar:hover .nav-link-text {
   opacity: 1;
+  position: relative;
+  transform: translateX(0);
 }
 
-.nav-link-icon{
-  font-size: 2rem;
+.nav-link:hover .nav-link-icon {
+  transform: rotate(360deg) scale(1.2);
+  color: #ff6f61;
 }
 
-.nav-link:hover .nav-link-icon,
 .nav-link:hover .nav-link-text {
-  color: #f05;
+  color: #ff6f61;
+  transform: translateX(10px);
 }
 
-.active{
-  color: #f05;
+.active {
+  color: #ff6f61;
+  font-size: 1.8rem;
+}
+
+.udgosh-img {
+  width: 90px;
+  height: 50px;
+  object-fit: contain;
+  border-radius: 10px;
+  transition: box-shadow 0.4s ease;
+}
+
+.udgosh-img:hover {
+  box-shadow: 0 6px 15px rgba(255, 255, 255, 0.5);
+}
+
+@media screen and (min-width: 800px) {
+  .desktopNav {
+    display: block;
+  }
 }

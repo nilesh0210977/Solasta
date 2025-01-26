@@ -1,77 +1,120 @@
-.service-section {
-  padding: 2.2rem 1rem;
-  @media screen and (min-width: 641px) {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
-  @media screen and (min-width: 1025px) {
-    padding-left: 4rem;
-    padding-right: 4rem;
-  }
-  @media screen and (min-width: 1225px) {
-    padding-left: 6rem;
-    padding-right: 6rem;
-  }
-  @media screen and (min-width: 1600px) {
-    padding-left: 14rem;
-    padding-right: 14rem;
-  }
-}
-
 .service-container {
   display: grid;
-  grid-template-columns: repeat(2,minmax(auto,200px));
+  grid-template-columns: repeat(2, minmax(auto, 250px)); 
   justify-content: center;
-  gap: 10px;
-  padding: 2rem 0rem;
+  gap: 20px; 
+  padding: 2rem 1rem;
   margin-top: 2rem;
-  border-radius: 10px;
+  border-radius: 15px;
+
+  
+  margin-right: 15px;
 
   @media screen and (min-width: 481px) {
-    gap: 2rem
+    gap: 2rem;
   }
   @media screen and (min-width: 641px) {
-    grid-template-columns: repeat(3,minmax(auto,300px));
-
+    grid-template-columns: repeat(3, minmax(auto, 300px)); 
   }
   @media screen and (min-width: 961px) {
-    grid-template-columns: repeat(4,minmax(auto,300px));
-
+    grid-template-columns: repeat(4, minmax(auto, 300px)); 
   }
 }
 
-
-.fig-container {
+.card {
+  position: relative;
+  width: 250px; 
+  height: 250px; 
+  perspective: 1000px; 
   display: flex;
-  flex-direction: column;
-  // justify-content:space-between;
+  justify-content: center;
   align-items: center;
-  padding: 1rem;
-  gap: 2rem;
-  background-color:  #000413;
+  border-radius: 15px; 
+  transition: transform 0.6s ease-in-out; 
+  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.3), 0 0 50px rgba(255, 0, 0, 0.3); 
+  transform-style: preserve-3d; 
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s ease-in-out;
+  transform-style: preserve-3d;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px; 
+}
+
+.card-front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: transparent; 
+  border: 2px solid rgba(255, 0, 0, 0.7); 
+  box-shadow: none; 
+  transition: transform 0.6s ease-in-out;
+}
+
+.card-front img {
+  width: 100px; 
+  height: 100px; 
+  object-fit: cover;
+  border-radius: 50%; 
+  filter: brightness(90%); 
+}
+
+.card-back {
+  background-color: #2f2f3b; 
   color: white;
-  border-radius: 15px;
-  height: auto;
-  border: 2px solid #000;
-  // height: 280px;
-  box-shadow: #f05 2px 4px 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.5rem;
+  text-align: center;
+  transform: rotateY(180deg); 
+  border-radius: 15px; 
+  box-shadow: 0 0 50px rgba(255, 0, 0, 0.3); 
+}
 
-  img {
-    height: 100px;
-    width: 100px;
-    object-fit: cover;
-    border-radius: 50%;
+.card-back h3 {
+  font-size: 1.5rem;
+  color: #ffcc00;
+  font-weight: bold;
+}
 
-  }
+.card-back p {
+  font-size: 1rem;
+  color: #fff;
+  opacity: 0.8;
+}
 
-  figCaption {
-    text-align: center;
-    font-size: 12px;
-  
+.titleContainer {
+  margin-top: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
 
-    @media screen and (min-width: 641px) {
-      font-size: 1rem;
-    }
-  }
+.titleCat {
+  font-family: Futura, sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 0.4rem;
+  font-weight: 500;
+}
+
+.titleBar {
+  width: 20rem;
 }
