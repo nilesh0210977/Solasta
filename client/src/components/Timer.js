@@ -23,8 +23,8 @@ export default function Timer(props) {
     return { days, hours, minutes, seconds };
   };
 
-  // Use the function after it's declared
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
+  const [previousTime, setPreviousTime] = useState(timeLeft);
   const [startRolling, setStartRolling] = useState(false);
 
   useEffect(() => {
@@ -56,6 +56,30 @@ export default function Timer(props) {
     };
   }, []);
 
+  useEffect(() => {
+    // Trigger flip animation when the timer changes (only for changed time part)
+    const changedTime = {};
+
+    if (timeLeft.days !== previousTime.days) changedTime.days = true;
+    if (timeLeft.hours !== previousTime.hours) changedTime.hours = true;
+    if (timeLeft.minutes !== previousTime.minutes) changedTime.minutes = true;
+    if (timeLeft.seconds !== previousTime.seconds) changedTime.seconds = true;
+
+    // Update previousTime to current time
+    setPreviousTime(timeLeft);
+
+    // Now apply flip animation only to the changed timer part
+    Object.keys(changedTime).forEach((timePart) => {
+      const flipElement = document.querySelector(`#${timePart} .flip`);
+      if (flipElement) {
+        flipElement.classList.add("flipping");
+        setTimeout(() => {
+          flipElement.classList.remove("flipping");
+        }, 1000); // Remove the flipping class after animation
+      }
+    });
+  }, [timeLeft]); // Trigger when timeLeft changes
+
   return (
     <div
       id="timer-section"
@@ -66,20 +90,28 @@ export default function Timer(props) {
           See <span>You</span> In
         </h2>
         <ul id="timer" className={`${props.page}-timer`}>
-          <li className="flex flex-col justify-center items-center">
-            <div className="timer-box" id="days">{timeLeft.days}</div>
+          <li className="flex flex-col justify-center items-center" id="days">
+            <div className="timer-box">
+              <div className="flip">{timeLeft.days}</div>
+            </div>
             <p className="timer-box-sub">DAYS</p>
           </li>
-          <li>
-            <div className="timer-box" id="hours">{timeLeft.hours}</div>
+          <li id="hours">
+            <div className="timer-box">
+              <div className="flip">{timeLeft.hours}</div>
+            </div>
             <p className="timer-box-sub">HOURS</p>
           </li>
-          <li>
-            <div className="timer-box" id="mins">{timeLeft.minutes}</div>
+          <li id="mins">
+            <div className="timer-box">
+              <div className="flip">{timeLeft.minutes}</div>
+            </div>
             <p className="timer-box-sub">MINS</p>
           </li>
-          <li>
-            <div className="timer-box" id="secs">{timeLeft.seconds}</div>
+          <li id="secs">
+            <div className="timer-box">
+              <div className="flip">{timeLeft.seconds}</div>
+            </div>
             <p className="timer-box-sub">SECS</p>
           </li>
         </ul>
