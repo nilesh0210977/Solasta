@@ -12,7 +12,7 @@
     left: 0px;
     height: 100%;
     width: 100%;
-    background: url('../assets/EventsBanner.jpeg')no-repeat center center/cover;   
+    background: url('../assets/eventbanner.png')no-repeat center center/cover;   
     z-index: -1;
 }
 

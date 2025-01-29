@@ -57,11 +57,11 @@ export default function Footer() {
         <div className="flex flex-col lg:flex-row gap-2">
           <p className="">  Copyright ©️ 2024, IIITDMK All rights reserved.</p>
           <p className="flex gap-2">
-          <a className="contact-links flex gap-1" href="https://www.linkedin.com/in/sohaibaftab/" target="_blank" rel="noopener noreferrer">
+          <a className="contact-links flex gap-1" href="https://www.linkedin.com/in/jvkousthub/" target="_blank" rel="noopener noreferrer">
             Designed <Icon icon="mdi:linkedin" style={{color:"#fff", fontSize:"1.5rem"}}/>
           </a>
             and
-            <a className="contact-links flex gap-1" href="https://www.linkedin.com/in/harish-choudhary17/" target="_blank" rel="noopener noreferrer">
+            <a className="contact-links flex gap-1" href="https://www.linkedin.com/in/anjani-kumar-s/" target="_blank" rel="noopener noreferrer">
               Developed <Icon icon="mdi:linkedin" style={{color:"#fff", fontSize:"1.5rem"}}/>
             </a>
             by Web Team Solasta

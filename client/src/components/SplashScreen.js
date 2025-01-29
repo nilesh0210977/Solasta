@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useSpring, animated } from "react-spring";
-import logo from "../assets/solastalogo.png"; 
+import logo from "../assets/logo_large.png"; 
 import './SplashScreen.css';
 
 const SplashScreen = ({ onAnimationEnd }) => {
