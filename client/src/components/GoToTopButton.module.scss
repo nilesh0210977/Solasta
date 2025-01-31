@@ -1,0 +1,28 @@
+.go-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #ff6f00;
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.go-to-top:hover {
+  background-color: #ff8c34;
+  transform: translateY(-5px);
+}
+
+.go-to-top svg {
+  width: 24px;
+  height: 24px;
+}

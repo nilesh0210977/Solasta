@@ -9,6 +9,9 @@ import Register from "./pages/Register";
 import Footer from "./components/Footer";
 import SplashScreen from "./components/SplashScreen";
 import "./App.css";
+import "./components/GoToTopButton"
+import GoToTopButton from "./components/GoToTopButton";
+
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
@@ -22,7 +25,7 @@ function App() {
         <SplashScreen onAnimationEnd={handleSplashEnd} />
       ) : (
         <>
-          {}
+          
           <Navbar />
 
           {}
@@ -35,6 +38,7 @@ function App() {
             <Route path="*" element={<h1>NO PAGES FOUND</h1>} />
           </Routes>
 
+          <GoToTopButton/>
           {}
           <Footer />
         </>

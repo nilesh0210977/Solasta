@@ -5,8 +5,8 @@
     gap: 5rem;
     opacity: 0;
     transition: opacity 1s ease-in;
-    background: linear-gradient(135deg, #1a1a2e, #16213e); /* Gradient background */
-    padding: 2rem; /* Optional: Add some padding for better spacing */
+    background: linear-gradient(135deg, #1a1a2e, #16213e); 
+    padding: 2rem; 
 }
 
 #timer-section.start-rolling {
