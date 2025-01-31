@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "./Navbar.module.scss";
 import udghosh from "../assets/udghosh.png";
-import logo from "../assets/logo.png";
+import logo from "../assets/solastalogo.png";
 import "./Navbar.css";
 import { Outlet, Link } from "react-router-dom";
 import { Icon } from "@iconify/react";

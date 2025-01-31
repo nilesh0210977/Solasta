@@ -34,7 +34,7 @@ const EventCard = ({ _id, title, date, time, venue, img,}) => {
             <p className="events-para"><Icon icon='carbon:location' /> - {venue}</p>
           </div>
 
-          <Link to={`/events/${_id}`} className="bg-[#f05] text-white text-[1.3rem] p-3" >Show Details</Link>
+          <Link to={`/events/${_id}`} className="bg-[#ff6f00] text-white text-[1.3rem] p-3" >Show Details</Link>
         </div>
 
       <h2 className="text-[1.5rem]  2xl:text-[2rem]  text-white mx-auto my-4" >{title}</h2>
@@ -84,7 +84,7 @@ const Events = () => {
 
       <div className="flex flex-wrap gap-4 justify-center items-center mt-4">
         {categories.map((category) =>
-          <div onClick={() => changeCategory(category)} className={`border-2 text-white px-4 py-2 rounded-lg cursor-pointer ${category === currentCategory ? 'text-[#F05] border-2 border-[#F05]' : ''}`}>
+          <div onClick={() => changeCategory(category)} className={`border-2 text-white px-4 py-2 rounded-lg cursor-pointer ${category === currentCategory ? 'text-[#ff6f00] border-2 border-[#ff6f00]' : ''}`}>
             {category}
           </div>
         )}

@@ -46,7 +46,7 @@
     background: rgba(0, 0, 0, 0.457);
     backdrop-filter: blur(12px);
     border: 2px solid rgb(255, 78, 137);
-    box-shadow: inset 0 0 10px #f05, 0 0 9px 3px #f05;
+    box-shadow: inset 0 0 10px #ff6f00, 0 0 9px 3px #ff6f00;
 
     font-family: Lato;
     line-height: 1.4rem;
@@ -79,7 +79,7 @@
 
 .submit-btn:hover,
 .buy-btn-del:hover {
-    color: #f05;
+    color: #ff6f00;
     box-shadow: inset 0 0 10px rgba(255, 0, 85, 0.5), 0 0 9px 3px rgba(255, 0, 85, 0.495);
 }
 

@@ -28,7 +28,7 @@
   content: '';
   width: 0%;
   height: 2px;
-  background: #f05;
+  background: #ff6f00;
   display: block;
   transition: 0.5s;
 }

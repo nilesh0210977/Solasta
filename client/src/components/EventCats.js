@@ -13,9 +13,7 @@ import SectionHeader from "./SectionHeader";
 const EventCats = () => {
   const navigate = useNavigate();
 
-  const data = [
-    { img: cat1, category: "Performing Arts", title: "Performing Arts", description: "An exciting event showcasing various forms of performing arts." },
-    { img: cat2, category: "Creative Arts", title: "Creative Arts", description: "A display of creativity through various artistic mediums." },
+  const categories = [
     { img: cat3, category: "Technical Events", title: "Technical Events", description: "Engage in hands-on technical challenges and innovations." },
     { img: cat4, category: "Literary", title: "Literary Events", description: "Explore the world of literature and creative writing." },
     { img: cat5, category: "Esports", title: "Esports", description: "Compete in thrilling online and offline gaming tournaments." },
@@ -36,7 +34,7 @@ const EventCats = () => {
 
   return (
     <section id="event-categories" className="event-categories py-12 px-4 sm:px-12 lg:px-24">
-      <SectionHeader color="#f05" heading="EVENT" along=" CATEGORIES" />
+      <SectionHeader color="#ff6f00" heading="EVENT" along=" CATEGORIES" />
       <Swiper
         grabCursor={true}
         loop={true}
@@ -66,25 +64,21 @@ const EventCats = () => {
         modules={[EffectCoverflow, Navigation, Autoplay]}
         className="hero-swiper"
       >
-        {data.map((details, index) => (
+        {categories.map((cat, index) => (
           <SwiperSlide key={index} className="swiper-slide">
             <Card
-              image={details.img}
-              category={details.category}
-              title={details.title}
-              description={details.description}
+              image={cat.img}
+              category={cat.category}
+              title={cat.title}
+              description={cat.description}
             />
           </SwiperSlide>
         ))}
       </Swiper>
-      <div className="img-btn mt-8 flex justify-center">
-        <img
-          draggable={false}
-          src={participatebtn}
-          onClick={() => navigate("/events")}
-          alt="Participate Button"
-          className="cursor-pointer hover:scale-110 transition-transform duration-300"
-        />
+      <div className="view-all-events-btn">
+        <button className="styled-view-all-button" onClick={() => navigate("/events")}>
+          View All Events
+        </button>
       </div>
     </section>
   );

@@ -2,29 +2,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
+  gap: 1.5rem;
   position: fixed;
   top: 0;
   z-index: 999;
   height: 100vh;
-  padding: 1.5rem;
+  padding: 1rem;
   color: #fff;
-  width: 100px;
-  background: linear-gradient(135deg, #1f1c2c, #928dab);
-  backdrop-filter: blur(15px);
+  width: 60px;
+  /* background: linear-gradient(135deg, #370b78, #4c34c4b6); */
+  backdrop-filter: blur(30px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
   border-right: 2px solid rgba(255, 255, 255, 0.2);
   transition: all 0.5s ease;
 }
 
 .navbar:hover {
-  width: 300px;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  width: 170px;
+  /* background: linear-gradient(135deg, #360a8e, #06a3d2c8, #079a8eb1); */
+  background: #36454F;
 }
 
 .logo-img {
-  width: 90px;
-  height: 90px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
   border-radius: 50%;
   box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
@@ -35,7 +36,7 @@
 
 .logo-img:hover {
   transform: scale(1.1);
-  box-shadow: 0 8px 20px rgba(255, 105, 97, 0.8), 0 6px 15px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 20px rgba(23, 143, 229, 0.8), 0 6px 15px rgba(0, 0, 0, 0.4);
 }
 
 
@@ -48,9 +49,9 @@
 .nav-link {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
   font-family: "Futura", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 0.15rem;
   color: #fff;
@@ -58,10 +59,11 @@
   position: relative;
   transition: all 0.3s ease;
   cursor: pointer;
+  padding: 0.8rem;
 }
 
 .nav-link-icon {
-  font-size: 2.5rem;
+  font-size: 1.6rem;
   transition: transform 0.4s ease, color 0.4s ease;
 }
 
@@ -71,6 +73,7 @@
   white-space: nowrap;
   transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
   transform: translateX(-20px);
+  font-size: 1rem;
 }
 
 .navbar:hover .nav-link {
@@ -110,8 +113,35 @@
   box-shadow: 0 6px 15px rgba(255, 255, 255, 0.5);
 }
 
+.nav-links {
+  gap: 2rem;
+}
+
 @media screen and (min-width: 800px) {
   .desktopNav {
     display: block;
   }
+}
+
+
+
+.register-now-button {
+    background: linear-gradient(135deg, #ff7e5f, #d8640b); 
+    color: #fff; 
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    transform: skew(-20deg);
+    display: inline-block;
+}
+
+.register-now-button:hover {
+    background: linear-gradient(135deg, #ff6f00, #f45730); 
+}
+
+.register-now-button .quick-link {
+    display: inline-block;
+    transform: skew(20deg); 
 }

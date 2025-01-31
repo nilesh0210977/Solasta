@@ -49,7 +49,7 @@ const Contact = () => {
     <section id='Contact' className='py-16 px-4 sm:px-12 lg:px-24'>
     <SectionHeader
         heading="Contact Us"
-        color="#f05"
+        color="#ff6f00"
       />
     <motion.div 
      className='flex flex-col p-8 rounded-2xl bg-black-100  mt-20 text-white mx-4 sm:mx-12 md:w-1/2 md:mx-auto'

@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./styles/card.css";
-import titlebar from "../assets/cardTitle1.png";
+
 
 function Card({ image, title, category, description }) {
   const navigate = useNavigate();
@@ -15,7 +15,6 @@ function Card({ image, title, category, description }) {
         <div className="card-back">
           <div className="titleContainer" onClick={() => navigate('/events', { state: category })}>
             <div className="titleCat">{title}</div>
-            <img draggable={false} className="titleBar" src={titlebar} alt="." />
           </div>
           <p className="card-description">{description}</p>
           <div className="buttonContainer">

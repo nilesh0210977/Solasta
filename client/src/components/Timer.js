@@ -1,12 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./styles/Timer.css";
-import registerbtn from "../assets/registerbtn.png";
 import SectionHeader from "./SectionHeader";
 
 export default function Timer(props) {
   const targetDate = "2025-02-21:00:00";
 
-  // Declare calculateTimeLeft before using it
   const calculateTimeLeft = () => {
     const difference = new Date(targetDate) - new Date();
     if (difference <= 0) {
@@ -28,12 +26,10 @@ export default function Timer(props) {
   const [startRolling, setStartRolling] = useState(false);
 
   useEffect(() => {
-    // Calculate time left every second
     const interval = setInterval(() => {
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
-    // IntersectionObserver to trigger animation when the timer comes into view
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -44,7 +40,7 @@ export default function Timer(props) {
           }
         });
       },
-      { threshold: 0.5 } // Trigger when 50% of the timer is visible
+      { threshold: 0.5 }
     );
 
     const timerSection = document.getElementById("timer-section");
@@ -57,7 +53,6 @@ export default function Timer(props) {
   }, []);
 
   useEffect(() => {
-    // Trigger flip animation when the timer changes (only for changed time part)
     const changedTime = {};
 
     if (timeLeft.days !== previousTime.days) changedTime.days = true;
@@ -65,20 +60,18 @@ export default function Timer(props) {
     if (timeLeft.minutes !== previousTime.minutes) changedTime.minutes = true;
     if (timeLeft.seconds !== previousTime.seconds) changedTime.seconds = true;
 
-    // Update previousTime to current time
     setPreviousTime(timeLeft);
 
-    // Now apply flip animation only to the changed timer part
     Object.keys(changedTime).forEach((timePart) => {
       const flipElement = document.querySelector(`#${timePart} .flip`);
       if (flipElement) {
         flipElement.classList.add("flipping");
         setTimeout(() => {
           flipElement.classList.remove("flipping");
-        }, 1000); // Remove the flipping class after animation
+        }, 1000);
       }
     });
-  }, [timeLeft]); // Trigger when timeLeft changes
+  }, [timeLeft]);
 
   return (
     <div
@@ -116,8 +109,10 @@ export default function Timer(props) {
           </li>
         </ul>
       </div>
-      <div className="img-btn register-btn">
-        <img draggable={false} src={registerbtn} alt="Button" />
+      <div className="register-btn">
+        <button className="styled-register-button">
+          Register Now
+        </button>
       </div>
     </div>
   );

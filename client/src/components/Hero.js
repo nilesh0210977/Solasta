@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo_large.png"
+import logo from "../assets/solastalogo.png"
 import udghosh from "../assets/udghosh.png";
 
 
@@ -18,12 +18,11 @@ export default function Hero() {
       <p className="text-[1.3rem] text-white font-bold text-center" style={styles}>IIITDM KURNOOL Present</p>
       <h1 className="hero-head">Solasta'25</h1>
       <img src={udghosh} className="max-w-[40%] lg:max-w-[20%]" alt="logo-img" />
-      <button className="absolute bottom-0 lg:top-8 lg:bottom-auto lg:right-8 w-fit-content text-white">
-      <Link to = "/register"
-        className="quick-link"
-      >
-        Register Now
-      </Link></button>
+      <button className="register-now-button absolute bottom-0 lg:top-8 lg:bottom-auto lg:right-8 w-fit-content">
+        <Link to="/register" className="quick-link">
+          Register Now
+        </Link>
+      </button>
     </div>
   );
 }

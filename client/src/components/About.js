@@ -3,7 +3,7 @@ import SectionHeader from "./SectionHeader";
 const About = () => {
   return (
     <div id="about-section" className="section  py-16 px-4 sm:px-12 lg:px-24">
-      <SectionHeader heading="ABOUT" along="US" color="#FF0055" />
+      <SectionHeader heading="ABOUT" along="US" color="#ff6f00" />
       <AboutUsDetails />
     </div>
   );

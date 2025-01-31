@@ -27,7 +27,7 @@ const Reason = () => {
   return (
     <section id="grid-section" className={Styles['service-section']}>
       <SectionHeader
-        color="#f05"
+        color="#ff6f00"
         heading="Reasons to Sponsor"
         along="SOLASTA"
       />
@@ -35,14 +35,13 @@ const Reason = () => {
         {data.map((service, i) => <ServiceCard key={i} {...service} />)}
       </div>
 
-      {}
-      <div className="img-btn">
-        <img
-          draggable={false}
-          src={contactbtn}
-          alt="Button"
+      <div className={Styles["img-btn"]}>
+        <button
+          className={Styles["styled-contact-button"]}
           onClick={() => navigate("/teams")}
-        />
+        >
+          Contact Sponsor Team
+        </button>
       </div>
     </section>
   );

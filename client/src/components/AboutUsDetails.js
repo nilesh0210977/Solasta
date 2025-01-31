@@ -1,6 +1,6 @@
 import React from "react";
-import logo from "../assets/logo_large.png";
-import "./styles/AboutUsDetails.css"; // Create a separate CSS file for styling
+import logo from "../assets/solastalogo.png";
+import "./styles/AboutUsDetails.css"; 
 
 
 import pdf from "../assets/brochure_final.pdf";
