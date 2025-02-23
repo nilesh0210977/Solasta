@@ -24,9 +24,9 @@ const languages = [
 
 "ସୋଲସ୍ତା '25", // Odia
 
-"ਸੋਲਸਤ੍ਰਾ '25", // Punjabi (Gurmukhi script)
+"ਸੋਲਸਤ੍ਰਾ '25", // Punjabi 
 
-"સોલસ્તા '25" // Gujarati (Latin script)
+"સોલસ્તા '25" // Gujarati 
    
 ];
 
