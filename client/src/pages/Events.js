@@ -51,6 +51,7 @@ const EventCard = ({ _id, title, date, time, venue, img, description }) => {
         {/* Front Side */}
         <div className="flip-card-front">
           <img src={image} alt={title} className="event-image" />
+          <div className="event-name-overlay">{title}</div>
         </div>
 
         {/* Back Side */}
