@@ -3,7 +3,7 @@ import "./styles/Timer.css";
 import SectionHeader from "./SectionHeader";
 
 export default function Timer(props) {
-  const targetDate = "2025-02-21:00:00";
+  const targetDate = "2025-03-17:00:00";
 
   const calculateTimeLeft = () => {
     const difference = new Date(targetDate) - new Date();

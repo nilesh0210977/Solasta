@@ -1,6 +1,6 @@
-/* FOOTER STYLES */
+
 #footer {
-    background: linear-gradient(-45deg, #000000, #555555, #0b0b0b, #555555);
+    background: linear-gradient(-45deg,  #000000, #181f37, #29355d, #181f37);
     background-size: 400% 400%;
     animation: gradientMove 12s ease infinite; 
     color: white;
@@ -141,7 +141,7 @@
 }
 
 .copyright {
-    background: linear-gradient(-45deg, #000000, #555555, #0b0b0b, #555555);
+    background: linear-gradient(-45deg,  #000000, #181f37, #29355d, #181f37);
     background-size: 400% 400%;
     animation: gradientMove 12s ease infinite; 
     backdrop-filter: blur(10px);
