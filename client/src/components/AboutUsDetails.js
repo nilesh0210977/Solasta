@@ -18,7 +18,7 @@ const AboutUsDetails = () => {
           </p>
         <p className="aboutpara">
 
-        SOLASTA, the flagship Techno-Cultural extravaganza of IIITDM Kurnool, has been a cornerstone of the institute's legacy since its inception in 2019. Recognized as the grandest festival of its kind not only in Kurnool city but across the greater Rayalaseema region, SOLASTA has become a vibrant platform that celebrates talent, creativity, and innovation. With an astounding annual footfall exceeding 10,000 attendees from over 50 prestigious colleges in the region, the event showcases thrilling competitions, artistic brilliance, and technological marvels, offering a staggering prize pool worth over ₹3,00,000.
+        SOLASTA, the flagship Techno-Cultural extravaganza of IIITDM Kurnool, has been a cornerstone of the institute's legacy since its inception in 2019. Recognized as the grandest festival of its kind not only in Kurnool city but across the greater Rayalaseema region, SOLASTA has become a vibrant platform that celebrates talent, creativity, and innovation. With an astounding annual footfall exceeding 10,000 attendees from over 50 prestigious colleges in the region, the event showcases thrilling competitions, artistic brilliance, and technological marvels, offering a staggering prize pool worth over ₹2,50,000.
         </p>
         <p className="aboutpara">
 
@@ -26,7 +26,7 @@ const AboutUsDetails = () => {
         </p>
 
 
-        <a class="fancy" href={pdf}  download="Solasta'24_Brochure_IIITK">
+        <a class="fancy" href={pdf}  download="Solasta'25_Brochure_IIITK">
           <span class="top-key"></span>
           <p className="text" >Download Brochure</p>
           <span class="bottom-key-1"></span>

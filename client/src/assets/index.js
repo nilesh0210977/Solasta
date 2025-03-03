@@ -7,21 +7,39 @@ import cat6 from "./6.png";
 import cat7 from "./7.png";
 import cat8 from "./8.png";
 
-import team1 from "./teams/team1.jpg";
-import team2 from "./teams/team2.png";
-import team3 from "./teams/team3.jpg";
-import team4 from "./teams/team4.jpg";
-import team5 from "./teams/team5.jpg";
-import team6 from "./teams/team6.jpg";
-import team7 from "./teams/team7.png";
-import team8 from "./teams/team8.jpg";
-import team9 from "./teams/team9.jpg";
-import team10 from "./teams/team10.jpg";
-import team11 from "./teams/team11.jpg";
+import anjani from "./teams/anjani.jpg";
+import ganesh from "./teams/ganesh.jpg";
+import gauri from "./teams/gauri.jpg";
+import harsh from "./teams/harsh.jpg";
+import harsith from "./teams/harsith.jpg";
+import koustubh from "./teams/koustubh.jpg";
+import krishna from "./teams/krishna.jpg";
+import pavan from "./teams/pavan.jpg";
+import prateesh from "./teams/prateesh.jpg";
+import priya from "./teams/priya.jpg";
+import rohan from "./teams/rohan.jpg";
+import sai from "./teams/sai.jpg";
+import sanjana from "./teams/sanjana.jpg";
+import sarvani from "./teams/sarvani.jpg";
+import Sohan from "./teams/Sohan.jpg";
+import sujith from "./teams/sujith.jpg";
+import sumanth from "./teams/sumanth.jpg";
+import varunika from "./teams/varunika.jpg";
 
+import ultimateGauntlet from "../assets/ultimate_gauntlet.jpg"; 
+import blurredimage from "../assets/blurred_image.jpg";
+import Ekphrasis from "../assets/Ekphrasis_Challenge.png";
+import Proverbs from "../assets/Proverbs.png";
+import Regional from "../assets/Regional.png";
+import Famdom from "../assets/Fandom.png";
+import pas from "../assets/pas.jpg";
+import cinema from "../assets/Cinema.png";
+import dance from "../assets/Dance-Topia.png";
+import rythmic from "../assets/rythmic.png";
 
 
 export {
     cat1, cat2, cat3, cat4, cat5, cat6, cat7, cat8,
-    team1, team2, team3, team4, team5, team6, team7, team8, team9, team10, team11
+    anjani, ganesh, gauri, harsh, harsith, koustubh, krishna, pavan, prateesh, priya, rohan,sai,sanjana,sarvani,Sohan,sujith,sumanth,varunika,
+    ultimateGauntlet,blurredimage,Ekphrasis,Proverbs,Regional,Famdom,pas,cinema,dance,rythmic
 };

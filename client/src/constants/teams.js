@@ -1,110 +1,42 @@
-import { team1,team2,team3,team4,team5,team6,team7,team8,team9,team10, team11} from "../assets";
+import { anjani, ganesh, gauri, harsh, harsith, koustubh, krishna, pavan, prateesh, priya, rohan, sai, sanjana, sarvani, Sohan, sujith, sumanth, varunika } from "../assets";
 
 const data = [
     {
         title: "Core Team",
         data: [
-            {
-                name: "Aditya Pandey",
-                img: team1,
-                designation : "Fest Lead",
-                instaLink: "https://www.instagram.com/_aditya_pandey_06?igsh=MXEzbHJ6N3Z5a3F0dQ==",
-                linkedinLink: "https://www.linkedin.com/in/aditya-pandey-0078962a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            },
-            {
-                name: "Suman Shekhar",
-                img: team7,
-                designation : "Event Lead",
-                instaLink: "https://www.instagram.com/ssumanshekhar/",
-                linkedinLink: "https://www.linkedin.com/in/suman-shekhar-59847822a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            },
-            {
-                name: "Preethi",
-                img: team6,
-                designation:"Public Relation",
-                instaLink: "",
-                linkedinLink: "https://www.linkedin.com/in/preethi-b-4a0a701b0?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            },
-            {
-                name: "Sai Bharath Reddy",
-                img: team4,
-                designation:'Event Lead',
-                instaLink: "",
-                linkedinLink: "https://www.linkedin.com/in/sai-bharath-reddy-kanala-9a4298254?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            },
-        
-            {
-                name: "Deepak Kumar",
-                img: team2,
-                designation:"Finance Lead",
-                instaLink: "",
-                linkedinLink: "https://www.linkedin.com/in/deepak-kumar-697310225?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            },
+            { name: "A V N Pavan Sai", img: pavan, designation: "Sponsorship & Event Manager", email: "122ad0025@iiitk.ac.in" },
+            { name: "M Rohan Joy", img: rohan, designation: "Sponsorship & Event Manager", email: "122CS0066@iiitk.ac.in" },
+            { name: "M Vishnu Priya", img: priya, designation: "Financial Dept", email: "122CS0017@iiitk.ac.in" },
             
-           
-            {
-                name: "ShivShankar Kumar",
-                img: team3,
-                designation:"Design & Merch Lead",
-                 instaLink: "https://www.instagram.com/shivu_327?igsh=eTdhOHNlN2g3bnVr",
-                linkedinLink: "https://www.linkedin.com/in/shivshankar-kumar-ab31a9229?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            },
-          
-            {
-                name: "Vivek Kumar",
-                img: team5,
-                designation: "Hospitality Lead",
-                 instaLink: "https://www.instagram.com/kr_vivekk?igsh=MTMxYTV6M3d6ODlscQ==",
-                linkedinLink: "https://www.linkedin.com/in/vivekkumar76?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            },
-          
-            
-            {
-                name: "Mohesvari",
-                img: team8,
-                designation : "Technical Lead",
-                instaLink: "https://www.instagram.com/mothi_1802?utm_source=qr&igsh=ZTBza2xlY2h2NmZ5",
-                linkedinLink: "https://www.linkedin.com/in/mohesvari-s-p?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            },
+            { name: "A. Ganesh Mani Kumar", img: ganesh, designation: "Logistics Department", email: "122ad0026@iiitk.ac.in" },
+            { name: "Prateesh Kumar Nayyar", img: prateesh, designation: "Design and Merch.", email: "122ec0054@iiitk.ac.in" },
+            { name: "Sujith Vundavalli", img: sujith, designation: "PR & Marketing", email: "123ec0031@iiitk.ac.in" },
+            { name: "M. Sai Charan", img: sai, designation: "PR Team", email: "123ad0002@iiitk.ac.in" },
+            { name: "B. Krishna Sri", img: krishna, designation: "Hospitality Department", email: "122ad0046@iiitk.ac.in" },
+            { name: "Sohan Maity", img: Sohan, designation: "Design and Merch.", email: "523ec0001@iiitk.ac.in" },
+            { name: "Harshvardhan Mandloi", img: harsh, designation: "Organising Team", email: "122me0009@iiitk.ac.in" },
+            { name: "Sri Harshith", img: harsith, designation: "Logistics Department", email: "122me0002@iiitk.ac.in" },
+            { name: "Sumanth Siddamsetty", img: sumanth, designation: "Organising Team", email: "122ec0033@iiitk.ac.in" },
+            { name: "Sanjana Arigela", img: sanjana, designation: "Organising Team", email: "122ad0004@iiitk.ac.in" },
+            { name: "Gouri Shankar", img: gauri, designation: "Sponsorship Team", email: "122me0017@iiitk.ac.in" },
+            { name: "Sarvani", img: sarvani, designation: "Organisation Team", email: "sarvanirayala01@gmail.com" }
         ]
-    }, {
+    },
+    {
         title: "WebDev Team",
         data: [
-            {
-                name: "Harish Choudhary",
-                img: team10,
-                designation :"WebDev Lead",
-                instaLink: "https://www.instagram.com/harish__seervi17/",
-                linkedinLink: "https://www.linkedin.com/in/harish-choudhary17/"
-            },
-            {
-                name: "Sohaib Aftab",
-                img: team11,
-                designation : "Web Design",
-                instaLink: "https://www.instagram.com/sohaibaftab.29/",
-                linkedinLink: "https://www.linkedin.com/in/sohaibaftab/"
-            }
+            { name: "Varunika", img: varunika, designation: "WebDev Team Lead", email: "122cs0042@iiitk.ac.in" },
+            { name: "Koustubh", img: koustubh, designation: "WebDev Design", email: "123cs0074@iiitk.ac.in" },
+            { name: "Anjani Kumar Singh", img: anjani, designation: "WebDev Design", email: "524cs0003@iiitk.ac.in" }
         ]
-    }
-    ,{
+    },
+    {
         title: "Sponsors Team",
         data: [
-            {
-                name: "Devesh Arya",
-                img: team9,
-                designation : "Sponsor Lead",
-                instaLink: "https://www.instagram.com/_devesharya__/",
-                linkedinLink: "https://www.linkedin.com/in/devesh6395/"
-            },
-            {
-                name: "Aditya Pandey",
-                img: team1,
-                designation : "Sponsor Lead",
-                 instaLink: "https://www.instagram.com/_aditya_pandey_06?igsh=MXEzbHJ6N3Z5a3F0dQ==",
-                linkedinLink: "https://www.linkedin.com/in/aditya-pandey-0078962a7?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-            },
+            { name: "M Rohan Joy", img: rohan, designation: "Sponsorship & Event Manager", email: "122CS0066@iiitk.ac.in" },
+            { name: "Gouri Shankar", img: gauri, designation: "Sponsorship Team", email: "122me0017@iiitk.ac.in" }
         ]
     }
-]
+];
 
 export default data;
