@@ -13,7 +13,8 @@ const Teams = () => {
                 <TeamsCard data={data[0]} />
                 <TeamsCard data={data[1]} />
                 <TeamsCard data={data[2]} />
-                <div className="flex flex-col lg:flex-row gap-12">
+                <TeamsCard data={data[3]} />
+                <div className="flex flex-col lg:flex-row gap-10">
                     
                 </div>
             </div>

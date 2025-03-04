@@ -24,7 +24,7 @@ export default function Footer() {
             <p className="contact-header">Contact Us</p>
             {/* <p>Coordinator : </p> */}
             <div className="sm:grid grid-cols-1 gap-3  md:grid-cols-2  xl:grid-cols-3">
-              <a className="contact-link" href="tel:7999548368">
+              <a className="contact-link" href="tel:9908267729">
                 <img className="contact-icon" src={callIcon} alt="" />
                 Pavan Sai
               </a>

@@ -315,7 +315,7 @@ const Events = () => {
       time: "11:00 AM - 2:00 PM",
       venue: "To Be Announced",
       img: "maze_runner.png",
-      category: "Fun Games",
+      category: "Technical Events",
       description: "Navigate through a tricky maze—only the smartest will escape!",
     },
     {
@@ -360,17 +360,17 @@ const Events = () => {
     },
     {
       _id: 23,
-      title: "Neon and Resin Art",
+      title: "Neon Blaze",
       date: "March 15",
       time: "2:00 - 3:30 PM",
       venue: "To Be Announced",
       img: "neon_resin_art.png",
       category: "Creative Arts",
-      description: "Create mesmerizing neon and resin art masterpieces!",
+      description: "Create mesmerizing neon art masterpieces!",
     },
     {
       _id: 24,
-      title: "Clay Art",
+      title: "Clay Alchemy ",
       date: "March 16",
       time: "2:00 - 3:30 PM",
       venue: "To Be Announced",
@@ -415,7 +415,7 @@ const Events = () => {
       time: "5:00 - 7:30 PM",
       venue: "To Be Announced",
       img: "battle_of_bands.png",
-      category: "Performing Arts",
+      category: "Pronites",
       description: "Bands compete for the ultimate title in this epic showdown!",
     },
     {
@@ -457,6 +457,16 @@ const Events = () => {
       img: "dj_night.png",
       category: "Pronites",
       description: "End the night with electrifying beats and non-stop energy!",
+    },
+    {
+      _id: 35,
+      title: "Resin Wonders",
+      date: "March 15",
+      time: "2:00 - 3:30 PM",
+      venue: "To Be Announced",
+      img: "neon_resin_art.png",
+      category: "Creative Arts",
+      description: "Create mesmerizing resin art masterpieces!",
     },
     
   ];

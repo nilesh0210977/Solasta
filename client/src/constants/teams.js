@@ -1,11 +1,11 @@
-import { anjani, ganesh, gauri, harsh, harsith, koustubh, krishna, pavan, prateesh, priya, rohan, sai, sanjana, sarvani, Sohan, sujith, sumanth, varunika } from "../assets";
+import { anjani, ganesh, gauri, harsh, harsith, Kousthub, krishna, pavan, prateesh, priya, rohan, sai, sanjana, sarvani, Sohan, sujith, sumanth, varunika } from "../assets";
 
 const data = [
     {
         title: "Core Team",
         data: [
-            { name: "A V N Pavan Sai", img: pavan, designation: "Sponsorship & Event Manager", email: "122ad0025@iiitk.ac.in" },
-            { name: "M Rohan Joy", img: rohan, designation: "Sponsorship & Event Manager", email: "122CS0066@iiitk.ac.in" },
+            { name: "A V N Pavan Sai", img: pavan, designation: "Sponsorship, Event Manager & Lead", email: "122ad0025@iiitk.ac.in" },
+            { name: "M Rohan Joy", img: rohan, designation: "Sponsorship, Event Manager & Lead", email: "122CS0066@iiitk.ac.in" },
             { name: "M Vishnu Priya", img: priya, designation: "Financial Dept", email: "122CS0017@iiitk.ac.in" },
             
             { name: "A. Ganesh Mani Kumar", img: ganesh, designation: "Logistics Department", email: "122ad0026@iiitk.ac.in" },
@@ -26,15 +26,24 @@ const data = [
         title: "WebDev Team",
         data: [
             { name: "Varunika", img: varunika, designation: "WebDev Team Lead", email: "122cs0042@iiitk.ac.in" },
-            { name: "Koustubh", img: koustubh, designation: "WebDev Design", email: "123cs0074@iiitk.ac.in" },
+            { name: "Kousthub", img: Kousthub, designation: "WebDev Design", email: "123cs0074@iiitk.ac.in" },
             { name: "Anjani Kumar Singh", img: anjani, designation: "WebDev Design", email: "524cs0003@iiitk.ac.in" }
         ]
     },
     {
         title: "Sponsors Team",
         data: [
-            { name: "M Rohan Joy", img: rohan, designation: "Sponsorship & Event Manager", email: "122CS0066@iiitk.ac.in" },
-            { name: "Gouri Shankar", img: gauri, designation: "Sponsorship Team", email: "122me0017@iiitk.ac.in" }
+            { name: "M Rohan Joy", img: rohan, designation: "Sponsorship, Event Manager & Lead", email: "122CS0066@iiitk.ac.in" },
+            { name: "Gouri Shankar", img: gauri, designation: "Sponsorship Team", email: "122me0017@iiitk.ac.in" },
+            { name: "A V N Pavan Sai", img: pavan, designation: "Sponsorship, Event Manager & Lead", email: "122ad0025@iiitk.ac.in" }
+        ]
+    },
+    {
+        title: "Leads",
+        data: [
+            { name: "M Rohan Joy", img: rohan, designation: "Sponsorship, Event Manager & Lead", email: "122CS0066@iiitk.ac.in" },
+            // { name: "Gouri Shankar", img: gauri, designation: "Sponsorship Team", email: "122me0017@iiitk.ac.in" },
+            { name: "A V N Pavan Sai", img: pavan, designation: "Sponsorship, Event Manager & Lead", email: "122ad0025@iiitk.ac.in" }
         ]
     }
 ];
