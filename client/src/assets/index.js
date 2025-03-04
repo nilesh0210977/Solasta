@@ -18,6 +18,8 @@ import pavan from "./teams/pavan.jpg";
 import prateesh from "./teams/prateesh.jpg";
 import priya from "./teams/priya.jpg";
 import rohan from "./teams/rohan.jpg";
+import adityashankar from "./teams/adityashankar.jpg";
+import shubhankar from "./teams/shubhankar.jpg";
 import sai from "./teams/sai.jpg";
 import sanjana from "./teams/sanjana.jpg";
 import sarvani from "./teams/sarvani.jpg";
@@ -40,6 +42,6 @@ import rythmic from "../assets/rythmic.png";
 
 export {
     cat1, cat2, cat3, cat4, cat5, cat6, cat7, cat8,
-    anjani, ganesh, gauri, harsh, harsith, Kousthub, krishna, pavan, prateesh, priya, rohan,sai,sanjana,sarvani,Sohan,sujith,sumanth,varunika,
+    anjani, ganesh, gauri, harsh, harsith, Kousthub, krishna, pavan, prateesh, priya, rohan,adityashankar,shubhankar,sai,sanjana,sarvani,Sohan,sujith,sumanth,varunika,
     ultimateGauntlet,blurredimage,Ekphrasis,Proverbs,Regional,Famdom,pas,cinema,dance,rythmic
 };

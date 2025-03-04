@@ -5,6 +5,10 @@ html {
     scroll-behavior: smooth;
 }
 
+html, body {
+  overflow-x: hidden;
+}
+
 body {
     background-color: var(--bg-primary);
     color: var(--text-primary);

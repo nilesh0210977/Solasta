@@ -164,3 +164,15 @@
     text-align: center;
     width: 80%;
 }
+
+/* Adjust the events container for mobile */
+@media (max-width: 768px) {
+  .events-container {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .flip-card-inner {
+    flex-direction: column;
+  }
+}

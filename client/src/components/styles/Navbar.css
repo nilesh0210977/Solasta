@@ -90,6 +90,19 @@
   width: 6rem;
 }
 
+/* Adjust the navbar for mobile */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-link {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
 @media (max-width: 430px) {
   .navbar {
     display: none;

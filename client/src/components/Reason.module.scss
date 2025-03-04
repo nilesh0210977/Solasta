@@ -17,6 +17,12 @@
   @media screen and (min-width: 961px) {
     grid-template-columns: repeat(4, minmax(auto, 300px)); 
   }
+  @media screen and (max-width: 480px) {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    margin-right: 0;
+    justify-items: center; /* Center align the cards */
+  }
 }
 
 .card {
@@ -31,6 +37,11 @@
   transition: transform 0.6s ease-in-out; 
   box-shadow: 0 10px 30px rgba(255, 183, 0, 0.281), 0 0 50px rgba(255, 162, 0, 0.258); 
   transform-style: preserve-3d; 
+
+  @media screen and (max-width: 480px) {
+    width: 200px;
+    height: 200px;
+  }
 }
 
 .card-inner {
@@ -134,6 +145,11 @@
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
+
+  @media screen and (max-width: 480px) {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
 }
 
 .styled-contact-button::before {

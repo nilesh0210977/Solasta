@@ -14,7 +14,7 @@ const data = [
     },
     {
         img: sp2,
-        data : "Appearance of sponsor name and logo on website and merchandises of SOLASTA’24."
+        data : "Appearance of sponsor name and logo on website and merchandises of SOLASTA’25."
     },
     {
         img: sp5,

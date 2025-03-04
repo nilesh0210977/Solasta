@@ -23,6 +23,7 @@ import alankar from "../assets/alankar.png";
 import rhythm_riffs from "../assets/rhythm_riffs.png";
 import clay_art from "../assets/clay_art.png";
 import neon_resin_art from "../assets/neon_resin_art.png";
+import dataworks from "../assets/dataworks.png";
 import coding_knockout from "../assets/coding_knockout.png";
 import coding_contest from "../assets/coding_contest.png";
 import bitsquad from "../assets/bitsquad.png";
@@ -62,6 +63,7 @@ const EventCard = ({ _id, title, date, time, venue, img, description }) => {
     "rhythm_riffs.png": rhythm_riffs,
     "clay_art.png": clay_art,
     "neon_resin_art.png": neon_resin_art,
+    "dataworks.png": dataworks,
     "coding_knockout.png": coding_knockout,
     "coding_contest.png": coding_contest,
     "bitsquad.png": bitsquad,
@@ -130,7 +132,7 @@ const Events = () => {
     "Creative Arts",
     "Technical Events",
     "Fun Games",
-    "Literary",
+    "Literature",
     "Pronites",
   ];
 
@@ -155,7 +157,7 @@ const Events = () => {
       time: "9:00 - 10:30 AM",
       venue: "To Be Announced",
       img: "blurred_image.jpg",
-      category: "Literary",
+      category: "Literature",
       description: "Your challenge? Transform these intriguing visuals into a gripping, original story!",
     },
     {
@@ -165,8 +167,8 @@ const Events = () => {
       time: "9:00 - 10:30 AM",
       venue: "To Be Announced",
       img: "Ekphrasis_Challenge.png",
-      category: "Literary",
-      description: "You will create a poem or essay inspired by stunning Indian art or global literary themes.",
+      category: "Literature",
+      description: "You will create a poem or essay inspired by stunning Indian art or global Literature themes.",
     },
     {
       _id: 4,
@@ -175,7 +177,7 @@ const Events = () => {
       time: "9:00 - 10:30 AM",
       venue: "To Be Announced",
       img: "Proverbs.png",
-      category: "Literary",
+      category: "Literature",
       description: "You will take iconic Indian proverbs and turn them into creative poems! ",
     },
     {
@@ -185,7 +187,7 @@ const Events = () => {
       time: "9:00 - 10:30 AM",
       venue: "To Be Announced",
       img: "Regional.png",
-      category: "Literary",
+      category: "Literature",
       description: "In Regional Storytelling Relay, you will be part of a team weaving a seamless story across India’s diverse languages and cultures. ",
     },
     {
@@ -195,7 +197,7 @@ const Events = () => {
       time: "9:00 - 10:30 AM",
       venue: "To Be Announced",
       img: "Famdom.png",
-      category: "Literary",
+      category: "Literature",
       description: "In Fandom Debate: Heroes vs Villains, you will either defend your favorite hero or champion a notorious villain",
     },
     {
@@ -255,7 +257,7 @@ const Events = () => {
       time: "9:00 - 10:30 AM",
       venue: "To Be Announced",
       img: "sherlock_byomkesh.png",
-      category: "Literary",
+      category: "Literature",
       description: "A fusion of two great detectives—are you ready to deduce the truth?",
     },
     {
@@ -265,7 +267,7 @@ const Events = () => {
       time: "11:00-11:50 AM",
       venue: "To Be Announced",
       img: "pw.jpg",
-      category: "Literary",
+      category: "Literature",
       description: "Physics Wallah Talk \- Unleashing Knowledge  \,Sparking Curiosity and Empowering Minds for a Brighter Tomorrow!",
     },
     {
@@ -467,6 +469,16 @@ const Events = () => {
       img: "neon_resin_art.png",
       category: "Creative Arts",
       description: "Create mesmerizing resin art masterpieces!",
+    },
+    {
+      _id: 36,
+      title: "Datathon",
+      date: "March 16",
+      time: "9:00 AM - 1:00 PM",
+      venue: "To Be Announced",
+      img: "dataworks.png",
+      category: "Technical Events",
+      description: "AI/ML Hackathon by DataWorks -Datathon",
     },
     
   ];

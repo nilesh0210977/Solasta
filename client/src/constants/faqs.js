@@ -94,7 +94,7 @@ const accomodation = [
   },
   {
     question: "What are the restrictions for students attending the fest?",
-    answer: "Students coming to the fest should not roam here and there and must not enter OPD, IPD, or any place not authorized.",
+    answer: "Students attending the fest are kindly requested to refrain from wandering and are not permitted to enter the OPD, IPD, or any unauthorized areas",
     isOpen: false,
   },
   {
