@@ -1,5 +1,5 @@
 import sp1 from "../assets/Sponsor1.jpg";
-import sp2 from "../assets/Sponsor2.jpg";
+import sp2 from "../assets/image.png";
 import sp3 from "../assets/Sponsor3.jpg";
 import sp4 from "../assets/Sponsor4.jpg";
 import sp5 from "../assets/Sponsor5.avif";
@@ -14,7 +14,7 @@ const data = [
     },
     {
         img: sp2,
-        data : "Appearance of sponsor name and logo on website and merchandises of SOLASTA’23."
+        data : "Appearance of sponsor name and logo on website and merchandises of SOLASTA’24."
     },
     {
         img: sp5,

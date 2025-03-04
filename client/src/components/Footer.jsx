@@ -1,6 +1,6 @@
 import React from "react";
 // import anahataLogo from "../images/images/footer_logo.png";
-import logo from "../assets/clg_logo.png";
+import logo from "../assets/footerlogo.png";
 import instagram from "../assets/images/social/ig.svg";
 import youtube from "../assets/images/social/yt.svg";
 import whatsapp from "../assets/images/social/wp.svg";
@@ -26,7 +26,7 @@ export default function Footer() {
             <div className="sm:grid grid-cols-1 gap-3  md:grid-cols-2  xl:grid-cols-3">
               <a className="contact-link" href="tel:7999548368">
                 <img className="contact-icon" src={callIcon} alt="" />
-                Name
+                Pavan Sai
               </a>
 
 
@@ -44,7 +44,7 @@ export default function Footer() {
             _blank" rel="noopener noreferrer">
               <img src={youtube} alt="Youtube" />
             </a>
-            <a href="https://wa.me/7999548368" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/+919908267729" target="_blank" rel="noopener noreferrer">
               <img src={whatsapp} alt="Whatsapp" />
             </a>
             <a href="mailto:solasta@iiitk.ac.in">
@@ -55,7 +55,7 @@ export default function Footer() {
       </div>
       <div className="copyright flex flex-col items-center justify-center">
         <div className="flex flex-col lg:flex-row gap-2">
-          <p className="">  Copyright ©️ 2024, IIITDMK All rights reserved.</p>
+          <p className="">  Copyright ©️ 2025, IIITDMK All rights reserved.</p>
           <p className="flex gap-2">
           <a className="contact-links flex gap-1" href="https://www.linkedin.com/in/sohaibaftab/" target="_blank" rel="noopener noreferrer">
             Designed <Icon icon="mdi:linkedin" style={{color:"#fff", fontSize:"1.5rem"}}/>

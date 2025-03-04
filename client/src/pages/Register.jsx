@@ -1,81 +1,89 @@
-import React from "react";
+import React, { useState } from "react";
 import registerHero from "../assets/EventsBanner.jpeg";
 import "../components/styles/Ticket.css";
 
 export default function Register() {
-  const ins1 = `Solasta Pass Discounted Price for Full Three Day Entry: ₹500
+  const [role, setRole] = useState(null);
 
+  const studentPass = `Solasta Pass for IIITDM Kurnool Students (FREE)
+  
   Benefits of this pass:
-  1.	Access to attend all events
-  2.	Access to participate in all cultural and non-technical events
-  3.	Access to attend Pronites (Celebrity Night, Rock Night, Fashion Show, DJ Night)
-
-  Charges for Participating in technical events (Outside IIITDM Kurnool Students):
-  1.	Hackathon- ₹100
-  2.	Coding Challenge- ₹50
-  3.	Design Quest- ₹75
-  4.	Drone Race- ₹100
-  5.	RC Car Racing on rally track- ₹75
-  6.	Micro-maze- ₹75
+  1. Access to attend all events
+  2. Access to participate in all events
+  3. Access to attend Pronites (Celebrity Night, Rock Night, Fashion Show, DJ Night)
+  4. Solasta’24 Official Merch (T-shirt) is compulsory for attending the events.
   `;
 
-  const ins3 = `Solasta Pass Discounted Price for One Day Entry: ₹200
-
+  const outsider300 = `Solasta Pass - ₹300
+  
   Benefits of this pass:
-  1.	Access to attend all events
-  2.	Access to participate in all cultural and non-technical events
-  3.	Access to attend Pronites (Celebrity Night, Rock Night, Fashion Show, DJ Night)
-
-  Charges for Participating in technical events (Outside IIITDM Kurnool Students):
-  1.	Hackathon- ₹100
-  2.	Coding Challenge- ₹50
-  3.	Design Quest- ₹75
-  4.	Drone Race- ₹100
-  5.	RC Car Racing on rally track- ₹75
-  6.	Micro-maze- ₹75
+  1. Access to view all events
+  2. Access to participate in any two events
+  3. Access to attend Pronites (Celebrity Night, Rock Night, Fashion Show, DJ Night)
   `;
 
-  const ins2 = `Solasta Pass for IIITDM Kurnool Students:\n Solasta’24 Official Merch (T-shirt) is compulsory for attending the events in Solasta.
- 
+  const outsider500 = `Solasta Pass - ₹500
+  
   Benefits of this pass:
-  1.	Access to attend all events
-  2.	Access to participate in all events
-  3.	Access to attend Pronites (Celebrity Night, Rock Night,Fashion Show, DJ Night)
-`;
+  1. Access to view all events
+  2. Access to participate in all events
+  3. Access to attend Pronites (Celebrity Night, Rock Night, Fashion Show, DJ Night)
+  `;
+
+  const studentFormLink = "https://docs.google.com/forms/d/e/1FAIpQLScdnw0MH7zAqG3VgkSg2xsH8DZ4khwWFnD-6z8yEpYHSvPGGA/viewform";
+  const outsiderFormLink = "https://docs.google.com/forms/d/e/1FAIpQLSftHbHsrca02Wt1N5GzdXV-BTuEM9HpBqG4djPVwOvl-_6SPA/viewform";
 
   return (
     <div className="RegisterPage">
-      <div className="register-section ">
+      <div className="register-section">
         <img className="hero-background-sign" src={registerHero} alt="" />
         <div className="below-register flex flex-col gap-8">
-          <p className="register-head ">
-            EARLY BIRD REGISTERATION BUY NOW AND GET 50% OFF!
+          <p className="register-head">
+            EARLY BIRD REGISTRATION - BUY NOW AND GET 50% OFF!
           </p>
-          <div className="register-form">
-            <p style={{ whiteSpace: "pre-line" }}>{ins1}</p>
-            <button className="submit-btn">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSda--XmXb30n94VlHDZtgPvoEo5DCvFi6k7qUgs9SJTQ5p-8w/formrestricted">
-                Buy Now
-              </a>
-            </button>
-          </div>
-          <div className="register-form">
-            <p style={{ whiteSpace: "pre-line" }}>{ins3}</p>
-            <button className="submit-btn">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSda--XmXb30n94VlHDZtgPvoEo5DCvFi6k7qUgs9SJTQ5p-8w/formrestricted">
-                Buy Now
-              </a>
-            </button>
-          </div>
-          {/* <div className="register-form">
-            <p style={{ whiteSpace: "pre-line" }}>{ins2}</p>
-            <button  className="submit-btn">
-              <a href="https://docs.google.com/forms/d/e/1FAIpQLSda--XmXb30n94VlHDZtgPvoEo5DCvFi6k7qUgs9SJTQ5p-8w/formrestricted">
-                Buy Now
-              </a>
-            </button>
-  
-          </div> */}
+
+          {/* Role Selection */}
+          {!role && (
+            <div className="role-selection">\
+              <button className="submit-btn" onClick={() => setRole("student")}>Student</button>
+              <button className="submit-btn" onClick={() => setRole("outsider")}>Outsider</button>
+            </div>
+          )}
+
+          {/* Student Registration */}
+          {role === "student" && (
+            <div className="register-form">
+              <p style={{ whiteSpace: "pre-line" }}>{studentPass}</p>
+              <button className="submit-btn">
+                <a href={studentFormLink} target="_blank" rel="noopener noreferrer">
+                  Register Now
+                </a>
+              </button>
+            </div>
+          )}
+
+          {/* Outsider Registration */}
+          {role === "outsider" && (
+            <>
+              <div className="register-form">
+                <p style={{ whiteSpace: "pre-line" }}>{outsider300}</p>
+                <button className="submit-btn">
+                  <a href={outsiderFormLink} target="_blank" rel="noopener noreferrer">
+                    Register for ₹300
+                  </a>
+                </button>
+              </div>
+
+              <div className="register-form">
+                <p style={{ whiteSpace: "pre-line" }}>{outsider500}</p>
+                <button className="submit-btn">
+                  <a href={outsiderFormLink} target="_blank" rel="noopener noreferrer">
+                    Register for ₹500
+                  </a>
+                </button>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </div>
