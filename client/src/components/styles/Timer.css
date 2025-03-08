@@ -1,0 +1,141 @@
+#timer-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 5rem;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+    background: linear-gradient(135deg, #1a1a2e, #16213e); 
+    padding: 2rem; 
+}
+
+#timer-section.start-rolling {
+    opacity: 1;
+}
+
+#timer-section #timer-head {
+    font-family: Lato;
+    font-size: 3rem;
+    font-weight: 300;
+    color: white;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+#timer-head span {
+    color: rgb(255, 174, 0);
+    text-shadow: 0 0 10px rgb(255, 149, 0);
+}
+
+#timer {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    padding: 0;
+}
+
+.timer-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 9rem;
+    height: 6rem;
+    color: #FFF;
+    font-size: 4rem;
+    font-family: Futura;
+    font-weight: 500;
+    background:linear-gradient(135deg, #ff6f00, #f45730); 
+    box-shadow: 0 0 20px rgba(249, 245, 30, 0.422);
+    border-radius: 1rem;
+    border: 1px solid #FFF;
+    transform: translateY(100%);
+    animation: roll 1s ease-out forwards;
+}
+
+@keyframes roll {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+}
+
+.timer-box-sub {
+    color: #FFF;
+    font-family: Lato;
+    font-size: 1.2rem;
+    letter-spacing: 0.3rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.register-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.styled-register-button {
+    background: linear-gradient(135deg, #ff6f00, #f45730); 
+    color: #fff; 
+    padding: 12px 24px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1.2rem;
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2), 0 0 10px rgba(255, 126, 95, 0.5);
+    transform: skew(-10deg);
+    position: relative;
+    overflow: hidden;
+}
+
+.styled-register-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.15);
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.styled-register-button:hover::before {
+    width: 400%;
+    height: 400%;
+}
+
+.styled-register-button:hover {
+    background: linear-gradient(135deg, #ff913d, #ff9e03);
+    transform: skew(-10deg) scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(255, 126, 95, 0.7);
+}
+
+.styled-register-button:active {
+    transform: skew(-10deg) scale(0.95);
+}
+
+@media screen and (max-width: 720px) {
+    .timer-box {
+      width: 4rem;
+      height: 4rem;
+      font-size: 1.7rem;
+    }
+
+    .timer-box-sub {
+      font-size: 0.7rem;
+    }
+
+    .styled-register-button {
+      font-size: 1rem;
+      padding: 8px 16px;
+    }
+}

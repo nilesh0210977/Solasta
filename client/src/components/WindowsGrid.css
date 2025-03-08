@@ -1,0 +1,42 @@
+.video-scroller {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Adjust for your layout */
+    grid-gap: 10px;
+    overflow: hidden;
+    height: 100vh;
+    animation: scrollUp 4s ease-in-out;
+  }
+  
+  .video-container {
+    width: 100%;
+    height: 200px; /* Adjust as needed */
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 1s ease, z-index 1s ease;
+  }
+  
+  .video-container.enlarged {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    transform: scale(1.2);
+  }
+  
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  @keyframes scrollUp {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-100%);
+    }
+  }
+  

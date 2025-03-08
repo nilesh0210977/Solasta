@@ -1,0 +1,205 @@
+/* General Page Styling */
+.RegisterPage {
+    padding-top: 96px;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsive Width */
+@media screen and (min-width: 800px) {
+    .RegisterPage {
+        width: calc(100vw - 82px);
+        margin-left: auto;
+    }
+}
+
+/* Background Image */
+.hero-background-sign {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+    filter: brightness(0.7);
+}
+
+/* Section Below Hero */
+.below-register {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+/* Heading */
+.register-head {
+    color: #ffffff;
+    font-family: "Poppins", sans-serif;
+    font-size: 2.8rem;
+    text-align: center;
+    padding: 1.5rem;
+    font-weight: 600;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.1);
+    max-width: 80%;
+    margin-bottom: 1.5rem;
+}
+
+/* Form Styling */
+.register-form {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+    background: rgba(0, 0, 0, 0.5);
+    border: 2px solid #ff6f00;
+    box-shadow: 0px 8px 20px rgba(255, 111, 0, 0.3);
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.2rem;
+    max-width: 450px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hover Effect for Form */
+.register-form:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 30px rgba(255, 111, 0, 0.5);
+}
+
+/* Role Selection Buttons */
+.role-selection {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.role-selection .submit-btn {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border: 2px solid #ff6f00;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.role-selection .submit-btn:hover {
+    background: #ff6f00;
+    color: black;
+}
+
+/* Buttons */
+.submit-btn,
+.buy-btn-del {
+    font-family: "Poppins", sans-serif;
+    font-size: 1rem;
+    padding: 1rem 2rem;
+    letter-spacing: 0.06em;
+    border-radius: 10px;
+    border: none;
+    transition: all 0.3s;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    background: linear-gradient(to right, rgba(253, 27, 151, 0.2), rgba(255, 111, 0, 0.5));
+    color: white;
+    border: 2px solid rgba(255, 111, 0, 0.8);
+    box-shadow: 0px 5px 15px rgba(255, 111, 0, 0.3);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Button Hover Effect */
+.submit-btn:hover,
+.buy-btn-del:hover {
+    background: #ff6f00;
+    color: black;
+    box-shadow: 0px 8px 20px rgba(255, 111, 0, 0.6);
+}
+
+/* Button Animation */
+.submit-btn:before,
+.buy-btn-del:before {
+    content: "";
+    position: absolute;
+    left: -5em;
+    width: 4em;
+    height: 100%;
+    top: 0;
+    transition: transform 0.4s ease-in-out;
+    background: linear-gradient(to right, transparent 10%, rgba(253, 27, 151, 0.2) 40%, rgba(255, 111, 0, 0.3) 60%, transparent 100%);
+}
+
+.submit-btn:hover:before,
+.buy-btn-del:hover:before {
+    transform: translateX(20em);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 720px) {
+    .below-register {
+        padding: 1rem;
+        padding-top: 10vh;
+    }
+
+    .register-head {
+        font-size: 2.2rem;
+        padding: 1rem;
+        width: 90%;
+    }
+
+    .hero-background-sign {
+        object-fit: cover;
+    }
+
+    .register-form {
+        padding: 1.2rem;
+        width: 90%;
+    }
+}
+.RegisterPage {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;  
+    padding-top: 96px;
+}
+
+.register-section {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer Styling */
+.footer {
+    margin-top: auto; /* Pushes footer to the bottom */
+    padding: 10px;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    width: 100%;
+}

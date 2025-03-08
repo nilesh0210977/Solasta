@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Panel Solasta</title>
+    <link rel="stylesheet" href="/server/static/admin.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <main>
+        <p id="eventhead">Enter details to modify event:</p>
+        <form action="/admin/save-event/<%= event._id %>" method="post">
+            <select name="category" id="category">
+                <option value="<%=event.category %>" selected><%= event.category %></option>
+                    <option value="Creative Arts">Creative Arts</option>
+                    <option value="Technical Events">Technical Events</option>
+                    <option value="Literary">Literary</option>
+                    <option value="Esports">Esports</option>
+                    <option value="Fun Games">Fun Games</option>
+                    <option value="Digital Arts">Digital Arts</option>
+                    <option value="Pronites">Pronites</option>
+                    <option value="Performing Arts">Performing Arts</option>
+                </select>
+            <br>
+            <select name="type" id="type">
+                <option value="<%= event.type %>" selected disabled><%= event.type %></option>
+                <option value="solo">Solo</option>
+                <option value="duet">Duet</option>
+                <option value="group">Group</option>
+            </select>
+
+
+            <label for="name">Event Name: </label>
+            <input value="<%= event.title %>" type="text" id="name" name="title" />
+
+
+            <label for="photo">Photo Name with Extension: </label>
+            <input value="<%= event.img %>" type="text" id="photo" name="img" />
+
+            <label for="venue">Venue: </label>
+            <input value="<%= event.venue %>" type="text" id="venue" name="venue" />
+
+
+            <label for="date">Date: </label>
+            <input value="<%= event.date %>" type="text" id="date" name="date" />
+
+
+            <label for="timing">Timing: </label>
+            <input value="<%= event.time %>" type="text" id="timing" name="time" />
+
+
+            <label for="duration">Duration: </label>
+            <input value="<%= event.span %>" type="text" id="duration" name="span" />
+
+
+            <label for="prize">Prize Pool: </label>
+            <input value="<%= event.prizePool %>" type="text" id="prize" name="prizePool" />
+
+            <label for="slots">No. of Slots: </label>
+            <input value="<%= event.noOfSlots %>" type="number" id="prize" name="noOfSlots" />
+
+            <label for="fee">Registration Fee: </label>
+            <input value="<%= event.registrationFee %>" type="text" name="registrationFee" id="fee" />
+
+
+            <label for="link">Form Link: </label>
+            <input type="text" value="<%= event.link %>" name="link" id="link" />
+        
+            <label for="description">Description: </label>
+            <textarea rows="{6}" id="description" name="description"><%= event.description.join('#') %></textarea>
+
+            <label for="rules">Rule book: </label>
+            <textarea rows="{6}" id="rules" name="ruleBook"><%= event.ruleBook.join('#') %></textarea>
+
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <section class="events">
+
+    </section>
+</body>
+
+</html>

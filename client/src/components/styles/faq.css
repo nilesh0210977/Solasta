@@ -1,0 +1,73 @@
+.faq-main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    scroll-snap-align: center;
+}
+
+.faq-sec {
+    font-family: Lato;
+    color: rgb(255, 255, 255);
+    max-width: 95%;
+    margin-top: 3rem;
+    position: relative;
+    z-index: 2;
+    border-radius: 3px;
+}
+
+.first-div {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    max-width: 70%;
+    border-radius: 0.75rem;
+    border: 1px solid #424070;
+    background: rgba(98, 98, 98, 0.05);
+    backdrop-filter: blur(12px);
+    min-width: 100%;
+    padding: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    font-size: 1.2rem;
+}
+
+.child-1 {
+    margin: 10px;
+
+}
+
+.second-div {
+    width: 98%;
+    
+
+}
+
+.toggle-button {
+    border: 5px;
+    border-color: #ffffff;
+    cursor: pointer;
+
+}
+
+/* Add this to your CSS */
+.child-2 {
+    padding-left: 10px;
+    max-height: 0;
+    overflow: hidden;
+
+}
+
+.child-2.visible {
+    max-height: 1000px;
+}
+
+.faq-sec {
+    max-height: 100%;
+    overflow: hidden;
+}
+
+.faq-sec.visible {
+    max-height: 1000px;
+    /* Adjust the max-height to a value that fits your content */
+}

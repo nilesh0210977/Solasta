@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Panel Solasta</title>
+    <link rel="stylesheet" href="/server/static/admin.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <main>
+        <p id="eventhead">Enter details to add event to list:</p>
+        <form action="admin/add-event" method="post">
+            <select name="category" id="category">
+                <option value="Select" selected disabled>Category</option>
+                <option value="Creative Arts">Creative Arts</option>
+                <option value="Technical Events">Technical Events</option>
+                <option value="Literary">Literary</option>
+                <option value="Esports">Esports</option>
+                <option value="Fun Games">Fun Games</option>
+                <option value="Digital Arts">Digital Arts</option>
+                <option value="Pronites">Pronites</option>
+                <option value="Performing Arts">Performing Arts</option>
+            </select>
+            <br>
+            <select name="type" id="type">
+                <option value="Select" selected disabled>Type</option>
+                <option value="solo">Solo</option>
+                <option value="duet">Duet</option>
+                <option value="group">Group</option>
+            </select>
+
+            <!-- <label for="day">Day Number: </label>
+            <input type="number" id="day" name="day" /> -->
+
+
+            <!-- <label for="number">Event Number for the Day: </label>
+            <input type="number" id="number" name="number" /> -->
+
+
+            <label for="name">Event Name: </label>
+            <input type="text" id="name" name="title" />
+
+            <label for="photo">Photo Name with Extension: </label>
+            <input type="text" id="photo" name="img" />
+            <!-- 
+            <label for="detail">Event Description: </label>
+            <input type="text" id="detail" name="detail" /> -->
+
+
+            <label for="venue">Venue: </label>
+            <input type="text" id="venue" name="venue" />
+
+            <label for="date">Date: </label>
+            <input type="text" id="date" name="date" />
+
+
+            <label for="timing">Timing: </label>
+            <input type="text" id="timing" name="time" />
+
+
+            <label for="duration">Duration: </label>
+            <input type="text" id="duration" name="span" />
+
+            <label for="prize">Prize Pool: </label>
+            <input type="text" id="prize" name="prizePool" />
+
+            <label for="slots">No. of Slots: </label>
+            <input type="number" id="prize" name="noOfSlots" />
+
+            <label for="fee">Registration Fee: </label>
+            <input type="text" name="registrationFee" id="fee" />
+
+            <label for="link">Form Link: </label>
+            <input type="text" name="link" id="link" />
+
+            <label for="description">Description: </label>
+            <textarea rows="{6}" id="description" name="description"></textarea>
+
+            <label for="rules">Rule book: </label>
+            <textarea rows="{6}" id="rules" name="ruleBook"></textarea>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <section class="events">
+        <p class="event-card-header">Modify or delete existing events.</p>
+        <% Array.from(events).forEach(element=> { %>
+            <div class="event-card">
+                <p class="event-card-header">
+                    EVENT : <%= element.title %>
+                </p>
+                <button class="edit-btn">
+                    <a href="admin/edit-event/<%= element._id %>">Edit</a>
+                </button>
+                <button class="delete-btn">
+                    <a href="admin/delete-event/<%= element._id %>"><img src="/server/static/dustbin.svg"
+                            alt="" /></a></button>
+            </div>
+            <% }) %>
+    </section>
+    <script>
+        const search = document.getElementById("search");
+        const events = Array.from(
+            document.getElementsByClassName("event-card")
+        );
+
+        search.addEventListener("input", (e) => {
+            const searchParams = e.target.value.toLowerCase()
+            events.forEach((element) => {
+                isVisible = element.name
+                    .toLowerCase()
+                    .replace(" ", "")
+                    .includes(searchParams.replace(" ", ""));
+                element.classList.toggle("hide", !isVisible);
+            });
+        })
+    </script>
+</body>
+
+</html>
